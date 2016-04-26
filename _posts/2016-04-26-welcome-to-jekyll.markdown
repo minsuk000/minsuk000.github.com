@@ -8,7 +8,7 @@ categories: jekyll update
  
  Suppose that the data 
 
-$$y_i\overset{i.i.d}\sim N(\theta,1)$$.
+$y_i \sim N(\theta,1)$.
 
 [comment]: # (You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.)
 
@@ -19,4 +19,4 @@ $$y_i\overset{i.i.d}\sim N(\theta,1)$$.
 
 [comment]: # [jekyll-docs]: http://jekyllrb.com/docs/home
 [comment]: # [jekyll-gh]:   https://github.com/jekyll/jekyll
-[comment]: # [jekyll-talk]: https://talk.jekyllrb.com/
+[comment]: # [jekyll-talk]: https://talk.jekyllrb.com
