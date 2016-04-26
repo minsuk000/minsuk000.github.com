@@ -18,4 +18,3 @@ categories: jekyll update
 [comment]: # [jekyll-docs]: http://jekyllrb.com/docs/home
 [comment]: # [jekyll-gh]:   https://github.com/jekyll/jekyll
 [comment]: # [jekyll-talk]: https://talk.jekyllrb.com/
-
