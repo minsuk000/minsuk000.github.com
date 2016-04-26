@@ -11,6 +11,14 @@ efewfwef
 [comment]: # To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
 
+[comment]: # {% highlight ruby %}
+[comment]: # def print_hi(name)
+[comment]: #   puts "Hi, #{name}"
+[comment]: # end
+[comment]: # print_hi('Tom')
+[comment]: # #=> prints 'Hi, Tom' to STDOUT.
+[comment]: # {% endhighlight %}
+
 [comment]: # Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [comment]: # [jekyll-docs]: http://jekyllrb.com/docs/home
