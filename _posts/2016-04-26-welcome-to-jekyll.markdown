@@ -6,7 +6,7 @@ categories: jekyll update
 ---
  The first post of this blog is about a comparison between Bayes model selection and the procedure based on shrinkage priors. Let's first start with a very simple example.
  
- Suppose that the data faewufhkasdlfkjlef
+ Suppose that the data faewufhkasdlfkjlef oijflejwalfjaliwjef
 
 $$y_i$$.
 
