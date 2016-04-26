@@ -16,6 +16,6 @@ url: "http://minsuk000.github.io" # the base hostname & protocol for your site
 github_username:  minsuk000
 
 # Build settings
-markdown: Pandoc
+markdown: kramdown
 
-# kramdown
+# 
