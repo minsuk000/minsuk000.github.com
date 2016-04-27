@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
-gem 'jekyll', '~>3.0.2'
-gem "html-proofer"
 
+group :jekyll_plugins do
+gem 'jekyll'
+gem 'jekyll-sitemap'
+gem 'jemoji'
+gem 'jekyll-redirect-from'
+gem 'jekyll-paginate'
+gem 'jekyll-compose'
+end
 
+gem 'font-awesome-sass'
+gem 'kramdown'
+gem 'rouge'
