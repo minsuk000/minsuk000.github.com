@@ -6,13 +6,9 @@ categories: jekyll update
 ---
  The first post of this blog is about a comparison between Bayes model selection and the procedure based on shrinkage priors. Let's first start with a very simple example.
  
- Suppose that the data faewufhkasdlfkjlef oijflejwalfjaliwjef foiajwelifjlawjf
+ Suppose that the data iojefoijeflijalijelijfij
 
-$$y_i$$.
-
-\begin{foo}
-y_i \sim
-\end{foo}
+$$a^2+b$$
 
 [comment]: # (You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.)
 
@@ -23,4 +19,4 @@ y_i \sim
 
 [comment]: # [jekyll-docs]: http://jekyllrb.com/docs/home
 [comment]: # [jekyll-gh]:   https://github.com/jekyll/jekyll
-[comment]: # [jekyll-talk]: https://talk.jekyllrb.co
+[comment]: # [jekyll-talk]: https://talk.jekyllrb.com/
