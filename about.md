@@ -6,6 +6,7 @@ title: About
 [Minsuk Shin](http://stat.tamu.edu/~minsuk) is a
 
 * Statistics nerd
+* Bayesian
 * Computer geek
 * Amateur soccer player
 
