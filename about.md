@@ -10,5 +10,4 @@ title: About
 * Amateur soccer player
 
 For further information, please visit [my webpage](http://stat.tamu.edu/~minsuk) or
-email me [minsuk@stat.tamu.edu](mailto:minsuk@stat.tamu.edu).
-
+email me <a href="mailto:minsuk@stat.tamu.edu">minsuk@stat.tamu.edu <a/>.
