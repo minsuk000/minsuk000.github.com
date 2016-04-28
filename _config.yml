@@ -3,10 +3,11 @@ permalink:           pretty
 
 # Setup
 title:               Bayesian Statistics
-tagline:             Minsuk Shin
 url:                 http://minsuk000.github.io
 paginate:            1
 baseurl:             ""
+
+#tagline:             Minsuk Shin
 
 # Assets
 #
