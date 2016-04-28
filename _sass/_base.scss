@@ -16,7 +16,8 @@ body {
 
 html {
   font-family: $root-font-family;
-  font-size: $root-font-size;
+  font-size: $large-font-size;
+  //$root-font-size;
   line-height: $root-line-height;
 
   @media (min-width: $large-breakpoint) {
@@ -27,7 +28,6 @@ html {
 body {
   color: $body-color;
   background-color: $body-bg;
-  font-size: 50px;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
