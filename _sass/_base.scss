@@ -14,15 +14,26 @@ body {
   padding: 0;
 }
 
-html {
-  font-family: $root-font-family;
-  font-size: $root-font-size;
-  line-height: $root-line-height;
 
-  @media (min-width: $large-breakpoint) {
-    font-size: $large-font-size;
+html {
+  font-size: 26px;
+  line-height: 1.5;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 30px;
   }
 }
+
+//html {
+//  font-family: $root-font-family;
+//  font-size: $root-font-size;
+//  line-height: $root-line-height;
+
+//  @media (min-width: $large-breakpoint) {
+//    font-size: $large-font-size;
+//  }
+//}
 
 body {
   color: $body-color;
