@@ -4,7 +4,7 @@ permalink:           pretty
 # Setup
 title:               BayesHigh
 url:                 http://minsuk000.github.io
-paginate:            2
+paginate:            4
 baseurl:             ""
 
 #tagline:             Minsuk Shin
