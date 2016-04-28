@@ -2,6 +2,9 @@
 layout: page
 title: About
 ---
+
+[Minsuk Shin](http://stat.tamu.edu/~minsuk) is a
+
 * Statistics nerd
 * Computer geek
 * Amateur soccer player
