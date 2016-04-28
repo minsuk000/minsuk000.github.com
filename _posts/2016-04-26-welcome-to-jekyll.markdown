@@ -3,6 +3,7 @@ layout: post
 title:  "Bayesian Model Selection and Shrinkage Priors (1)"
 date:   2016-04-26 11:58:24 -0500
 categories: jekyll update
+comments: true
 ---
  The first post of this blog is about a comparison between Bayes model selection and the procedure based on shrinkage priors. Let's first start with a very simple example.
  
