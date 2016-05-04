@@ -10,5 +10,5 @@ comments: true
  
  You may be familar with linear regression models as follows:
  
- $$Y_i = \beta_0 + \beta_1 $$ 
+ $$Y_i = \beta_0 + \beta_1 X_i $$ 
  
