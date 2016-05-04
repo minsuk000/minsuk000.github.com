@@ -4,6 +4,7 @@ title: "Bayesian Model Selection and Shrinkage Priors (1)"
 tags: Bayesian model selection, shrinkage priors
 comments: true
 ---
+
  There have been a lot of interest in model selection or variable selection methods.
   Because many data sets have"large p, small n" problem (or high-dimensional problem), it is crucial to reduce the dimension of the data, and the simplest way is to select a small number of  variables that well-fit to the model. I am going to introduce a simple introduction of this framework in Bayesian philosophy.
  
