@@ -8,7 +8,5 @@ comments: true
  
  You may be familar with linear regression models as follows:
  
- $latex
- Y_i = \beta_0 + \beta_1 X_{1i} _ \beta_2 X_{2i} + \beta_3 X_{3i} + \epsilon_i
- $
+ $$Y_i = \beta_0 + \beta_1 X_{1i} _ \beta_2 X_{2i} + \beta_3 X_{3i} + \epsilon_i$$
 
