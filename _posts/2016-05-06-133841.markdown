@@ -1,9 +1,4 @@
 ---
-layout: post
-title: 2016-05-04-bayes_model_selection_1
----
-
----
 layout:post
 title:"Bayesian Model Selection and Shrinkage Priors (1)"
 tags: Bayesian model selection, shrinkage priors
