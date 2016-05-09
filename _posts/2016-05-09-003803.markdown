@@ -23,8 +23,9 @@ $$\begin{eqnarray}M_3: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \beta_1 X_{ 3 i }+\e
    Let me start with some non-Bayesian model selection criterion. You may be familiar with some criteria like [Akaike Information Criterion (AIC)](https://en.m.wikipedia.org/wiki/Akaike_information_criterion) or [Bayesian Information Criterion (BIC)](https://en.m.wikipedia.org/wiki/Bayesian_information_criterion).
 AIC and BIC of a model $$M$$ can be defined as
 
-AIC: $$-2\hat l_M + 2\mid M\mid$$
-BIC: $$-2\hat l_M + \log n \mid M\mid$$, 
+AIC: $$-2\hat l_M + 2\mid {M} \mid$$
+
+BIC: $$-2\hat l_M + \log n \mid {M} \mid$$, 
 
 where $$\hat l_M $$ is the maximized likelihood of the model $$M$$ and  $$\mid M \mid$$ is the number of parameters in the model $$M$$.  So the first term $$\hat l_M$$ indicates the goodness-of-fit of the model to the observed data and the second term penalizes the complexity of the model so that more complex model is less likely to be selected.
 
