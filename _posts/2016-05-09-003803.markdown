@@ -8,25 +8,25 @@ comments: true
  
  Let's consider a linear regression model with three predictors as follows:
  
-$$ Y_i = \beta_0 + \beta_1 X_{ 1 i } + \beta_2  X_{ 2 i } +\beta_3 X_{3i} + \epsilon_i$$ , where $$\epsilon_i\overset{i.i.d}\sim N(0,1\sigma^2)$$ for $$ i=1,...,n $$.
+$$ Y_i = \beta_0 + \beta_1 X_{ 1 i } + \beta_2  X_{ 2 i } +\beta_3 X_{3i} + \epsilon_i$$ , where $$\epsilon_i\overset{i.i.d}\sim N(0,\sigma^2)$$ for $$ i=1,...,n $$.
 
 But suppose that we are not sure that "all" variables are linearly associated with the response (yeah,  linearity is a strong assumption, but for simplicity we just assume it). So we consider several models by selecting some variables as
 
 $$\begin{eqnarray}M_1: Y_i = \beta_0 +  \beta_1 X_{ 1 i } + \epsilon_i\end{eqnarray}$$
  
- $$\begin{eqnarray}M_2: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \epsilon_i\end{eqnarray}$$
+$$\begin{eqnarray}M_2: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \epsilon_i\end{eqnarray}$$
  
-  $$\begin{eqnarray}M_3: Y_i = \beta_0 +  \beta_1 X_{ 2 i } +   \beta_1 X_{ 3 i }+\epsilon_i\end{eqnarray}$$, .... etc. 
+$$\begin{eqnarray}M_3: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \beta_1 X_{ 3 i }+\epsilon_i\end{eqnarray}$$, .... etc. 
   
   Then the number of total possible models is $$2^3$$,  because the number of total covariates is 3. Some following questions are  "How can we select the model?" and "What is the criteria to decide which model is better than the others?". 
 
    Let me start with some non-Bayesian model selection criterion. You may be familiar with some criteria like [Akaike Information Criterion (AIC)](https://en.m.wikipedia.org/wiki/Akaike_information_criterion) or [Bayesian Information Criterion (BIC)](https://en.m.wikipedia.org/wiki/Bayesian_information_criterion).
 AIC and BIC of a model $$M$$ can be defined as
 
-AIC: $$-2\hat l_M + 2|M|$$
-BIC: $$-2\hat l_M + \log n |M|$$, 
+AIC: $$-2\hat l_M + 2\midM\mid$$
+BIC: $$-2\hat l_M + \log n \midM\mid$$, 
 
-where $$\hat l_M$$ is the maximized likelihood of the model $$M$$ and  $$|M|$$ is the number of parameters in the model $$M$$.  So the first term $$\hat l_M$$ indicates the goodness-of-fit of the model to the observed data and the second term penalizes the complexity of the model so that more complex model is less likely to be selected.
+where $$\hat l_M $$ is the maximized likelihood of the model $$M$$ and  $$\mid M \mid$$ is the number of parameters in the model $$M$$.  So the first term $$\hat l_M$$ indicates the goodness-of-fit of the model to the observed data and the second term penalizes the complexity of the model so that more complex model is less likely to be selected.
 
  AIC is a kind of asymptotic approximation of expected Kullback-Leibler (KL) divergence between the object model and the true model. So smaller, better. On the other hand, BIC is a little bit different. Even though its name contains "information criterion", strictly speaking it is not a information criteria. Usually, an information criteria refers to a measure of prediction performance, but BIC has nothing to do with any prediction point of view; BIC is an asymptotic approximation of  log marginal  likelihood of the given Bayesian model. So it does not make any sense to use BIC for simple Bayesian models with small sample size, since it is an approximation and what is the point of using approximations even when the exact forms are available?! Sadly, however,  some people use BIC for Bayesian models.
 
