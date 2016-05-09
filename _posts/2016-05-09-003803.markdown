@@ -25,9 +25,9 @@ But suppose that we are not sure that "all" variables are linearly associated wi
 AIC and BIC of a model $$M$$ can be defined as
 
 
-*$$AIC_M : -2\hat l_M + 2{|}{M}{|}$$
+*$$AIC_M : -2\hat l_M + 2{\mid{M}\mid}$$
 
-*$$BIC_M : -2\hat l_M + \log n \mid{M}\mid$$, 
+*$$BIC_M : -2\hat l_M + \log n {\mid{M}\mid}$$, 
 
 where $$\hat l_M $$ is the maximized likelihood of the model $$M$$ and  $$\mid M \mid$$ is the number of parameters in the model $$M$$.  So the first term $$\hat l_M$$ indicates the goodness-of-fit of the model to the observed data and the second term penalizes the complexity of the model so that more complex model is less likely to be selected.
 
