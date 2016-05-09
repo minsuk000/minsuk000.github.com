@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Basics of  Model Selection: AIC and BIC" 
+tags: Bayesian model selection, shrinkage priors
+comments: true
+---
+    There have been a lot of interest in model selection or variable selection methods. Because many data sets have"large p, small n" problem (or high-dimensional problem), it is crucial to reduce the dimension of the data, and the simplest way is to select a small number of  variables that well-fit to the model. I am going to introduce a simple introduction how to select the model.
+ 
+ Let's consider a linear regression model with three predictors as follows:
+ 
+$$ Y_i = \beta_0 + \beta_1 X_{ 1 i } + \beta_2  X_{ 2 i } +\beta_3 X_{3i} + \epsilon_i$$ , where $$\epsilon_i\overset{i.i.d}\sim N(0,1\sigma^2)$$ for $$ i=1,...,n $$.
+
+But suppose that we are not sure that "all" variables are linearly associated with the response (yeah,  linearity is a strong assumption, but for simplicity we just assume it). So we consider several models by selecting some variables as
+
+$$\begin{eqnarray}M_1: Y_i = \beta_0 +  \beta_1 X_{ 1 i } + \epsilon_i\end{eqnarray}$$
+ 
+ $$\begin{eqnarray}M_2: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \epsilon_i\end{eqnarray}$$
+ 
+  $$\begin{eqnarray}M_3: Y_i = \beta_0 +  \beta_1 X_{ 2 i } +   \beta_1 X_{ 3 i }+\epsilon_i\end{eqnarray}$$, .... etc. 
+  
+  Then the number of total possible models is $$2^3$$,  because the number of total covariates is 3. Some following questions are  "How can we select the model?" and "What is the criteria to decide which model is better than the others?". 
+
+   Let me start with some non-Bayesian model selection criterion. You may be familiar with some criteria like [Akaike Information Criterion (AIC)](https://en.m.wikipedia.org/wiki/Akaike_information_criterion) or [Bayesian Information Criterion (BIC)](https://en.m.wikipedia.org/wiki/Bayesian_information_criterion).
+AIC and BIC of a model $$M$$ can be defined as
+
+AIC: $$-2\hat l_M + 2|M|$$
+BIC: $$-2\hat l_M + \log n |M|$$, 
+
+where $$\hat l_M$$ is the maximized likelihood of the model $$M$$ and  $$|M|$$ is the number of parameters in the model $$M$$.  So the first term $$\hat l_M$$ indicates the goodness-of-fit of the model to the observed data and the second term penalizes the complexity of the model so that more complex model is less likely to be selected.
+
+ AIC is a kind of asymptotic approximation of expected Kullback-Leibler (KL) divergence between the object model and the true model. So smaller, better. On the other hand, BIC is a little bit different. Even though its name contains "information criterion", strictly speaking it is not a information criteria. Usually, an information criteria refers to a measure of prediction performance, but BIC has nothing to do with any prediction point of view; BIC is an asymptotic approximation of  log marginal  likelihood of the given Bayesian model. So it does not make any sense to use BIC for simple Bayesian models with small sample size, since it is an approximation and what is the point of using approximations even when the exact forms are available?! Sadly, however,  some people use BIC for Bayesian models.
+
+  Theoretically, AIC and BIC have very different properties. It is well-known that  AIC is optimal in prediction and estimation sense under some models like linear models; see [Shibata (1981)](http://www.jstor.org/stable/2335804). Also [Shibata (1983)](http://link.springer.com/article/10.1007%2FBF02480998) provided some examples where BIC fails to achieve to optimal rate of convergence, while AIC achieves it. However, AIC does not provide the model selection consistency which means that the probability that the selected model by AIC is equivalent to the true model (or the closest model to the true model in KL divergence sense) does not converges to one, while BIC enjoys the model selection consistency. Since BIC is some approximation of Bayesian stuff, someone might expect that  Bayesian model selection would be inferior to the model selection procedure by AIC. But as discussed in [Barbieri and Berger (2004)](http://arxiv.org/pdf/math/0406464.pdf#page29), it is wrong in a sense that BIC(or marginal likelihood) is not an appropriate criteria for prediction, but marginal inclusion probability; I will discuss the details in following posts.
+
+  One thing we need to remark is that all the good properties about AIC and BIC only hold in low-dimensional settings ($$n>p$$). In high-dimensional settings, when $p$ grows with $$n$$,  none of AIC and BIC has strong enough penalty on the model complexity so the resulting model selection procedure is misleading; no model selection consistency and  no optimality of estimation and prediction. However, sadly again, some people just use AIC or BIC in high-dimensional settings. To overcome this issue, there are rich literatures for high-dimensional information criterion such as [Extended BIC (EBIC)](http://biomet.oxfordjournals.org/content/95/3/759.abstract), [Generalized IC (GIC)](http://biomet.oxfordjournals.org/content/95/3/759.abstract), [High-dimensional BIC (HBIC)](http://www.sciencedirect.com/science/article/pii/S0047259X11000455) . All of them have the same idea; the penalty on the model complexity should depend on the dimension $$p$$. Especially, $$\log p $$ term in the model complexity is important to prevent overfitting in high-dimensional models.
+
+Going back to the simple toy example introduced in the beginning of this article, the model which has the minimal criteria value can be choosen; first evaluate $$AIC_{M_1}$$, $$AIC_{M_2}$$, $$AIC_{M_3}$$, ... etc (if you use AIC) and choose the model which minimizes these values. So simple, huh?
+Next post will be about likelihood ratio tests.
+  
+
