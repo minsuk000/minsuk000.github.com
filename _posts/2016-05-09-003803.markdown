@@ -12,11 +12,11 @@ $$ Y_i = \beta_0 + \beta_1 X_{ 1 i } + \beta_2  X_{ 2 i } +\beta_3 X_{3i} + \eps
 
 But suppose that we are not sure that "all" variables are linearly associated with the response (yeah,  linearity is a strong assumption, but for simplicity we just assume it). So we consider several models by selecting some variables as
 
-$$\begin{eqnarray}M_1: Y_i = \beta_0 +  \beta_1 X_{ 1 i } + \epsilon_i\end{eqnarray}$$
+*$$\begin{eqnarray}M_1: Y_i = \beta_0 +  \beta_1 X_{ 1 i } + \epsilon_i\end{eqnarray}$$
  
-$$\begin{eqnarray}M_2: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \epsilon_i\end{eqnarray}$$
+*$$\begin{eqnarray}M_2: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \epsilon_i\end{eqnarray}$$
  
-$$\begin{eqnarray}M_3: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \beta_1 X_{ 3 i }+\epsilon_i\end{eqnarray}$$, .... etc. 
+*$$\begin{eqnarray}M_3: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \beta_1 X_{ 3 i }+\epsilon_i\end{eqnarray}$$, .... etc. 
   
   Then the number of total possible models is $$2^3$$,  because the number of total covariates is 3. Some following questions are  "How can we select the model?" and "What is the criteria to decide which model is better than the others?". 
 
@@ -24,10 +24,9 @@ $$\begin{eqnarray}M_3: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \beta_1 X_{ 3 i }+\e
 AIC and BIC of a model $$M$$ can be defined as
 
 
- $$AIC_M : -2\hat l_M + 2\mid{M}\mid$$
+* $$AIC_M : -2\hat l_M + 2\mid{M}\mid$$
 
-
-  $$BIC_M : -2\hat l_M + \log n \mid{M}\mid$$, 
+* $$BIC_M : -2\hat l_M + \log n \mid{M}\mid$$, 
 
 where $$\hat l_M $$ is the maximized likelihood of the model $$M$$ and  $$\mid M \mid$$ is the number of parameters in the model $$M$$.  So the first term $$\hat l_M$$ indicates the goodness-of-fit of the model to the observed data and the second term penalizes the complexity of the model so that more complex model is less likely to be selected.
 
