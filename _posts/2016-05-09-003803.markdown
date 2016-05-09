@@ -25,7 +25,7 @@ But suppose that we are not sure that "all" variables are linearly associated wi
 AIC and BIC of a model $$M$$ can be defined as
 
 
-*$$AIC_M : -2\hat l_M + 2\mid{M}\mid$$
+*$$AIC_M : -2\hat l_M + 2{|}{M}{|}$$
 
 *$$BIC_M : -2\hat l_M + \log n \mid{M}\mid$$, 
 
