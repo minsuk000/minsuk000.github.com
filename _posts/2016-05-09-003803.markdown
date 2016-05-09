@@ -21,7 +21,7 @@ But suppose that we are not sure that "all" variables are linearly associated wi
   
   Then the number of total possible models is $$2^3$$,  because the number of total covariates is 3. Some following questions are  "How can we select the model?" and "What is the criteria to decide which model is better than the others?". 
 
-   Let me start with some information criterion: [Akaike Information Criterion (AIC)](https://en.m.wikipedia.org/wiki/Akaike_information_criterion) and [Bayesian Information Criterion (BIC)](https://en.m.wikipedia.org/wiki/Bayesian_information_criterion).
+   Let me start with some information criterion for this simple model selection problem: [Akaike Information Criterion (AIC)](https://en.m.wikipedia.org/wiki/Akaike_information_criterion) and [Bayesian Information Criterion (BIC)](https://en.m.wikipedia.org/wiki/Bayesian_information_criterion).
 AIC and BIC of a model $$M$$ can be defined as
 
 
