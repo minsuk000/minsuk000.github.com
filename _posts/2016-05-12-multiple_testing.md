@@ -32,8 +32,8 @@ as.vector(round(cor(X,y),3))
 
 
 {% highlight text %}
-##  [1] -0.066 -0.014 -0.563 -0.659 -0.583 -0.231 -0.337 -0.310 -0.257 -0.232
-## [11] -0.240 -0.258 -0.296 -0.343 -0.294 -0.332 -0.298 -0.306 -0.282 -0.243
+##  [1] -0.002 -0.036 -0.581 -0.638 -0.597 -0.325 -0.327 -0.350 -0.389 -0.311
+## [11] -0.311 -0.344 -0.378 -0.382 -0.408 -0.287 -0.352 -0.329 -0.240 -0.304
 {% endhighlight %}
 
   I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. 
@@ -46,23 +46,35 @@ To see the details of the problem, let me write some covariance structure of the
 $$\begin{eqnarray*} 
 Cor({\bf X},y) &\approx&  Cor\left( {\bf X} , - X_1 - X_2 + X_3 + X_4 + X_5 \right)\\
 &=&  \begin{bmatrix}
--1\\
--0.5\\
-.\\
-.\\
-.\\
--0.5
+1 & 0.5 & \dots & 0.5 \\
+0.5 & 1 & \dots & 0.5 \\
+0.5 & \dots& 1 &\dots \\
+0.5& \dots  &  \dots & \dots\\
+0.5 &\dots &\dots & 1\\
 \end{bmatrix}
-+ 
 \begin{bmatrix}
--0.5\\
 -1\\
--0.5\\
-.\\
-.\\
--0.5
+-1\\
+1\\
+1\\
+1\\
+0\\
+\dots\\
+0
 \end{bmatrix}
-
+\\
+&=&
+\begin{bmatrix}
+0\\
+0\\
+1\\
+1\\
+1\\
+0.5\\
+\dots\\
+0.5
+\end{bmatrix}
+ 
 \end{eqnarray*}
 $$
 
