@@ -29,7 +29,7 @@ AIC and BIC of a model $$M$$ can be defined as
 
 *$$BIC_M : -2\hat l_M + \log n {\mid{M}\mid}$$, 
 
-where $$\hat l_M $$ is the maximized likelihood of the model $$M$$ and  $$\mid M \mid$$ is the number of parameters in the model $$M$$.  So the first term $$\hat l_M$$ indicates the goodness-of-fit of the model to the observed data and the second term penalizes the complexity of the model so that more complex model is less likely to be selected.
+where $$\hat l_M $$ is the maximized log likelihood of the model $$M$$ and  $$\mid M \mid$$ is the number of parameters in the model $$M$$.  So the first term $$\hat l_M$$ indicates the goodness-of-fit of the model to the observed data and the second term penalizes the complexity of the model so that more complex model is less likely to be selected.
 
  AIC is a kind of asymptotic approximation of expected Kullback-Leibler (KL) divergence between the object model and the true model. So smaller, better. On the other hand, BIC is a little bit different. Even though its name contains "information criterion", strictly speaking it is not an information criteria. Usually, an information criteria refers to a measure of prediction performance, but BIC has nothing to do with any prediction point of view; BIC is an asymptotic approximation of  log marginal  likelihood of the given Bayesian model. So it does not make any sense to use BIC for simple Bayesian models with small sample size, since it is an approximation and what is the point of using approximations even when the exact forms are available?! Sadly, however,  some people use BIC for Bayesian models.
 
