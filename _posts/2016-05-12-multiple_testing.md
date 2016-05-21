@@ -35,9 +35,9 @@ as.vector(round(cor(X,y),3))
 ##  [1]  0.018  0.069 -0.477 -0.532 -0.544 -0.231 -0.328 -0.386 -0.306 -0.117
 ## [11] -0.168 -0.226 -0.245 -0.313 -0.320 -0.304 -0.236 -0.238 -0.271 -0.210
 {% endhighlight %}
-  I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. 
+  I calculated the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. 
 
-   Intuitively, the first five correlation coefficients shoud be significantly larger than the others, since the true linear model includes the first five, but the first two correlation coefficients are almost zero. Since the t-statistic is a monotone transformation of the correlation coefficient, multiple testing procedures for the data set will never select the first two variables that are involved in the true model. As suggested by [Fan and Lv (2008)](http://orfe.princeton.edu/~jqfan/papers/06/SIS.pdf), *Sure Independence Screening* (SIS) has been hilightened in many areas, but the above result shows that SIS may fail under some  settings where the covariates are correlated. 
+   Intuitively, the first five correlation coefficients shoud be more significant than the others, since the true linear model includes the first five, but the first two correlation coefficients are almost zero. Since the t-statistic is a monotone transformation of the abolute value of the correlation coefficient, multiple testing procedures for the data set will never select the first two variables that are involved in the true model. As suggested by [Fan and Lv (2008)](http://orfe.princeton.edu/~jqfan/papers/06/SIS.pdf), *Sure Independence Screening* (SIS) has been hilightened in many areas, but the above result shows that SIS may fail under some  settings where the covariates are correlated. 
 
 ###### *What's going on here?* 
 
