@@ -32,19 +32,19 @@ as.vector(round(cor(X,y),3))
 
 
 {% highlight text %}
-##  [1] -0.002 -0.036 -0.581 -0.638 -0.597 -0.325 -0.327 -0.350 -0.389 -0.311
-## [11] -0.311 -0.344 -0.378 -0.382 -0.408 -0.287 -0.352 -0.329 -0.240 -0.304
+##  [1]  0.005 -0.183 -0.607 -0.571 -0.611 -0.362 -0.324 -0.367 -0.353 -0.317
+## [11] -0.332 -0.333 -0.404 -0.273 -0.351 -0.311 -0.361 -0.369 -0.391 -0.386
 {% endhighlight %}
 
   I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. 
 Intuitively, the first five correlation coefficients shoud be significantly larger than the others, since the true linear model includs the first five, but the first two correlation coefficients are almost zero. Since the t-statistic is a monotone transformation of the correlation coefficient, multiple testing procedures will never select the first two variables that are involved in the true model.
 
-#### What's going on here?####
+##### What's going on here? 
 
 To see the details of the problem, let me write some covariance structure of the model. Roughly speaking, the correlation coefficients betweeen the response and the covariates can be identified by the following quantity
 
 $$\begin{eqnarray*} 
-Cor({\bf X},y) &\approx&  Cor\left( {\bf X} , - X_1 - X_2 + X_3 + X_4 + X_5 \right)\\
+Cov({\bf X},y) &\approx&  Cov\left( {\bf X} , - X_1 - X_2 + X_3 + X_4 + X_5 \right)\\
 &=&  \begin{bmatrix}
 1 & 0.5 & \dots & 0.5 \\
 0.5 & 1 & \dots & 0.5 \\
@@ -74,11 +74,19 @@ Cor({\bf X},y) &\approx&  Cor\left( {\bf X} , - X_1 - X_2 + X_3 + X_4 + X_5 \rig
 \dots\\
 0.5
 \end{bmatrix}
- 
+,
 \end{eqnarray*}
 $$
+wher $${\bf X} = (X_1,\dots,X_p)^T$$.
 
+   The first two covariance values are zero, and  even when the signal-to-ratio and the sample size are large enough, the resulting correlation between important variables and the response coulde be close to zero. The above extereme example says that when the covariates are correlated marginal correlation could give us nothing for the model selection.
 
-
-
+   To overcome this issue, [Fan et al. (2012)](https://orfe.princeton.edu/~jqfan/papers/12/FDP-JASA.pdf) introduced a multiple testing procedure that takes account for the correlation structure of the test statistics, but its estimation of  the  covariance structure itself is tricky under high-dimensional settings. In biostatistics fields, [#Surrogate Variable Analysis#](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161) (SVA) is quite popular, which is a huristic singluar value decomposition for multiple testing problems. It really does reduce the correlation between p-values, and the resulting distribution od the p-values becomes similar with a uniform distribution. However, somtimes its performance is unstable, since the methodology is ad hoc. Also, the inventor of the FDR control, Hochberg, published [a paper](https://projecteuclid.org/euclid.aos/1013699998) that asserts that  the FDR control is robust to some arbitrary correlation between test statistics. But their claim does not apply to the above exmaple, and any multiple testing procedure based on marginal test statistics fail to select the true model.
+   
+  #### Conclusion
+  
+  Even though multiple testing procedures such as the FDR control are useful in many applications, when the test statistics are correlated we really need to be careful to use the procedures. However, sadly, a lot of people just use the FDR or multiple testing for the high-dimensional model selection. It's no good !
+ 
+ 
+ 
 
