@@ -12,7 +12,7 @@ comments: true
    
    $$Y = X\beta_0 + \epsilon,$$   
    
-   where $$\epsilon \sim N(0,0.1 I_n)$$ and the true regression coefficients $$\beta_0 = (1,1,-1,-1,-1,0,\dots,0)$$ with $$n=200$$ and $$p=20$$, So only first five variables are involved in the data-generating model. Also, suppose that the covariate is generated from the Gaussian distribution with a confound symmety covariance with correlation 0.5; i.e., $$\Sigma_{i,j}=0.5$$, if $$i\neq j$$, and $$1$$, otherwise for $$1\leq i,j\leq p$$. Similar settings with this are commonly used in simukation studies of many variable slection papers such as  [nonlocal prior paper](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3867525/) , [the reciprocal lasso](http://www.tandfonline.com/doi/abs/10.1080/01621459.2014.984812), and [the BASAD](https://arxiv.org/pdf/1405.6545.pdf). The below is the R code to generate the data. 
+   where $$\epsilon \sim N(0,0.1 I_n)$$ and the true regression coefficients $$\beta_0 = (1,1,-1,-1,-1,0,\dots,0)$$ with $$n=200$$ and $$p=20$$, So only first five variables are involved in the data-generating model. Also, suppose that the covariate is generated from the Gaussian distribution with a confound symmety covariance with correlation 0.5; i.e., $$\Sigma_{i,j}=0.5$$, if $$i\neq j$$, and $$1$$, otherwise for $$1\leq i,j\leq p$$. Similar settings with this are commonly used in simulation studies of many variable slection papers such as  [nonlocal prior paper](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3867525/) , [the reciprocal lasso](http://www.tandfonline.com/doi/abs/10.1080/01621459.2014.984812), and [the BASAD](https://arxiv.org/pdf/1405.6545.pdf). The below is the R code to generate the data. 
 
 {% highlight r %}
 n=200; p =20
