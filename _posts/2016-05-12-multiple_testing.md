@@ -32,12 +32,12 @@ as.vector(round(cor(X,y),3))
 
 
 {% highlight text %}
-##  [1] -0.037 -0.021 -0.443 -0.624 -0.582 -0.296 -0.247 -0.244 -0.300 -0.311
-## [11] -0.243 -0.267 -0.314 -0.339 -0.335 -0.229 -0.321 -0.274 -0.223 -0.309
+##  [1]  0.057 -0.070 -0.598 -0.584 -0.545 -0.338 -0.249 -0.273 -0.294 -0.206
+## [11] -0.254 -0.294 -0.301 -0.303 -0.281 -0.256 -0.252 -0.244 -0.297 -0.353
 {% endhighlight %}
+  I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. As suggested by [Fan and Lv](http://orfe.princeton.edu/~jqfan/papers/06/SIS.pdf), *Sure Independence Screening* (SIS) has been hilightened in many areas, but the above result shows that SIS may fail under some  settings where the covariates are correlated. 
 
-  I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. 
-Intuitively, the first five correlation coefficients shoud be significantly larger than the others, since the true linear model includs the first five, but the first two correlation coefficients are almost zero. Since the t-statistic is a monotone transformation of the correlation coefficient, multiple testing procedures will never select the first two variables that are involved in the true model.
+   Intuitively, the first five correlation coefficients shoud be significantly larger than the others, since the true linear model includes the first five, but the first two correlation coefficients are almost zero. Since the t-statistic is a monotone transformation of the correlation coefficient, multiple testing procedures for the data set will never select the first two variables that are involved in the true model.
 
 ##### What's going on here? 
 
@@ -80,7 +80,7 @@ $$
 
 where $${\bf X} = (X_1,\dots,X_p)^T$$.
 
-   The first two covariance values are zero, and  even when the signal-to-ratio and the sample size are large enough, the resulting correlation between important variables and the response coulde be close to zero. The above extereme example says that when the covariates are correlated marginal correlation could give us nothing for the model selection.
+   The first two covariance values are zero, and  even when the signal-to-ratio and the sample size are large enough, the resulting correlation between important variables and the response coulde be close to zero, and the correlation between the response and the noise variable that do not involve in the ture model could be significantly departed from zero. The above extereme example says that when the covariates are correlated marginal correlation could force us  to select a wrong model.ß
 
    To overcome this issue, [Fan et al. (2012)](https://orfe.princeton.edu/~jqfan/papers/12/FDP-JASA.pdf) introduced a multiple testing procedure that takes account for the correlation structure of the test statistics, but its estimation of  the  covariance structure itself is tricky under high-dimensional settings. In biostatistics fields, [*Surrogate Variable Analysis*](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161) (SVA) is quite popular, which is a huristic singluar value decomposition for multiple testing problems. It really does reduce the correlation between p-values, and the resulting distribution od the p-values becomes similar with a uniform distribution. However, somtimes its performance is unstable, since the methodology is ad hoc. Also, the inventor of the FDR control, Hochberg, published [a paper](https://projecteuclid.org/euclid.aos/1013699998) that asserts that  the FDR control is robust to some arbitrary correlation between test statistics. But their claim does not apply to the above exmaple, and any multiple testing procedure based on marginal test statistics fail to select the true model.
    
