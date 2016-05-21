@@ -32,8 +32,8 @@ as.vector(round(cor(X,y),3))
 
 
 {% highlight text %}
-##  [1]  0.005 -0.183 -0.607 -0.571 -0.611 -0.362 -0.324 -0.367 -0.353 -0.317
-## [11] -0.332 -0.333 -0.404 -0.273 -0.351 -0.311 -0.361 -0.369 -0.391 -0.386
+##  [1] -0.037 -0.021 -0.443 -0.624 -0.582 -0.296 -0.247 -0.244 -0.300 -0.311
+## [11] -0.243 -0.267 -0.314 -0.339 -0.335 -0.229 -0.321 -0.274 -0.223 -0.309
 {% endhighlight %}
 
   I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. 
@@ -77,11 +77,12 @@ Cov({\bf X},y) &\approx&  Cov\left( {\bf X} , - X_1 - X_2 + X_3 + X_4 + X_5 \rig
 ,
 \end{eqnarray*}
 $$
-wher $${\bf X} = (X_1,\dots,X_p)^T$$.
+
+where $${\bf X} = (X_1,\dots,X_p)^T$$.
 
    The first two covariance values are zero, and  even when the signal-to-ratio and the sample size are large enough, the resulting correlation between important variables and the response coulde be close to zero. The above extereme example says that when the covariates are correlated marginal correlation could give us nothing for the model selection.
 
-   To overcome this issue, [Fan et al. (2012)](https://orfe.princeton.edu/~jqfan/papers/12/FDP-JASA.pdf) introduced a multiple testing procedure that takes account for the correlation structure of the test statistics, but its estimation of  the  covariance structure itself is tricky under high-dimensional settings. In biostatistics fields, [#Surrogate Variable Analysis#](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161) (SVA) is quite popular, which is a huristic singluar value decomposition for multiple testing problems. It really does reduce the correlation between p-values, and the resulting distribution od the p-values becomes similar with a uniform distribution. However, somtimes its performance is unstable, since the methodology is ad hoc. Also, the inventor of the FDR control, Hochberg, published [a paper](https://projecteuclid.org/euclid.aos/1013699998) that asserts that  the FDR control is robust to some arbitrary correlation between test statistics. But their claim does not apply to the above exmaple, and any multiple testing procedure based on marginal test statistics fail to select the true model.
+   To overcome this issue, [Fan et al. (2012)](https://orfe.princeton.edu/~jqfan/papers/12/FDP-JASA.pdf) introduced a multiple testing procedure that takes account for the correlation structure of the test statistics, but its estimation of  the  covariance structure itself is tricky under high-dimensional settings. In biostatistics fields, [*Surrogate Variable Analysis*](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161) (SVA) is quite popular, which is a huristic singluar value decomposition for multiple testing problems. It really does reduce the correlation between p-values, and the resulting distribution od the p-values becomes similar with a uniform distribution. However, somtimes its performance is unstable, since the methodology is ad hoc. Also, the inventor of the FDR control, Hochberg, published [a paper](https://projecteuclid.org/euclid.aos/1013699998) that asserts that  the FDR control is robust to some arbitrary correlation between test statistics. But their claim does not apply to the above exmaple, and any multiple testing procedure based on marginal test statistics fail to select the true model.
    
   #### Conclusion
   
