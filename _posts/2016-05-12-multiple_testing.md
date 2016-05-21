@@ -8,7 +8,7 @@ comments: true
   
   Another popular testing-based approach for model selection is mutiple testing procedures. In linear models, by marginally considering each covariate, we can get $$p$$ number of t-statistics and its p-values, and we can select the variables whose p-value is small. Since Bonferroni's correction is too conservative, False Discovery Rate (FDR) control [(Benjamini and Hochberg, 1995)](http://www.math.tau.ac.il/~ybenja/MyPapers/benjamini_hochberg1995.pdf) is popular, which controls the expected proportion of Type I errors among the rejected hypotheses.
   
-   However, these mutiple testing approaches have a critical problems when the tests statistics are correlated. Let me explain it with a simple example. Condier the model as 
+   However, these mutiple testing approaches have a critical problems when the tests statistics are correlated. Let me explain it with a simple example. Consider the model as 
    
    $$Y = X\beta_0 + \epsilon,$$   
    
@@ -32,8 +32,8 @@ as.vector(round(cor(X,y),3))
 
 
 {% highlight text %}
-##  [1]  0.057 -0.070 -0.598 -0.584 -0.545 -0.338 -0.249 -0.273 -0.294 -0.206
-## [11] -0.254 -0.294 -0.301 -0.303 -0.281 -0.256 -0.252 -0.244 -0.297 -0.353
+##  [1]  0.006 -0.006 -0.579 -0.556 -0.549 -0.308 -0.303 -0.226 -0.346 -0.285
+## [11] -0.316 -0.286 -0.239 -0.276 -0.254 -0.118 -0.273 -0.286 -0.209 -0.231
 {% endhighlight %}
   I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. As suggested by [Fan and Lv](http://orfe.princeton.edu/~jqfan/papers/06/SIS.pdf), *Sure Independence Screening* (SIS) has been hilightened in many areas, but the above result shows that SIS may fail under some  settings where the covariates are correlated. 
 
