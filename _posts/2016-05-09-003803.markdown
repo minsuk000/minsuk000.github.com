@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Basics of  Model Selection: AIC and BIC" 
+title: "Basics of  Model Selection: Information Criterion" 
 tags: Bayesian model selection, shrinkage priors
 comments: true
 ---
