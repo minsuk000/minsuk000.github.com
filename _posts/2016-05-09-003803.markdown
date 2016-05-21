@@ -15,9 +15,9 @@ But suppose that we are not sure that "all" variables are linearly associated wi
 
 *$$\begin{eqnarray}M_1: Y_i = \beta_0 +  \beta_1 X_{ 1 i } + \epsilon_i\end{eqnarray}$$
  
-*$$\begin{eqnarray}M_2: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \epsilon_i\end{eqnarray}$$
+*$$\begin{eqnarray}M_2: Y_i = \beta_0 +  \beta_2 X_{ 2 i } + \epsilon_i\end{eqnarray}$$
  
-*$$\begin{eqnarray}M_3: Y_i = \beta_0 +  \beta_1 X_{ 2 i } + \beta_1 X_{ 3 i }+\epsilon_i\end{eqnarray}$$, .... etc. 
+*$$\begin{eqnarray}M_3: Y_i = \beta_0 +  \beta_2 X_{ 2 i } + \beta_3 X_{ 3 i }+\epsilon_i\end{eqnarray}$$, .... etc. 
   
   Then the number of total possible models is $$2^3$$,  because the number of total covariates is 3. Some following questions are  "How can we select the model?" and "What is the criteria to decide which model is better than the others?". 
 
