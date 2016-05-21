@@ -32,8 +32,8 @@ as.vector(round(cor(X,y),3))
 
 
 {% highlight text %}
-##  [1] -0.086 -0.133 -0.635 -0.639 -0.639 -0.377 -0.445 -0.273 -0.378 -0.389
-## [11] -0.347 -0.393 -0.407 -0.385 -0.358 -0.308 -0.331 -0.389 -0.380 -0.416
+##  [1]  0.057  0.009 -0.546 -0.518 -0.578 -0.330 -0.209 -0.316 -0.271 -0.312
+## [11] -0.177 -0.236 -0.302 -0.356 -0.294 -0.194 -0.286 -0.320 -0.323 -0.277
 {% endhighlight %}
   I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. As suggested by [Fan and Lv (2008)](http://orfe.princeton.edu/~jqfan/papers/06/SIS.pdf), *Sure Independence Screening* (SIS) has been hilightened in many areas, but the above result shows that SIS may fail under some  settings where the covariates are correlated. 
 
@@ -80,7 +80,7 @@ $$
 
 where $${\bf X} = (X_1,\dots,X_p)^T$$.
 
-   The first two covariance values are zero, and  even when the signal-to-ratio and the sample size are large enough, the resulting correlation between important variables and the response coulde be close to zero, and the correlation between the response and the noise variable that do not involve in the ture model could be significantly departed from zero. The above extereme example says that when the covariates are correlated marginal correlation could force us  to select a wrong model.ß
+   The first two covariance values are zero, and  even when the signal-to-ratio and the sample size are large enough, the resulting correlation between important variables and the response coulde be close to zero, and the correlation between the response and the noise variable that do not involve in the ture model could be significantly departed from zero. The above extereme example says that when the covariates are correlated the marginal correlations could force us  to select a wrong model.
 
    To overcome this issue, [Fan et al. (2012)](https://orfe.princeton.edu/~jqfan/papers/12/FDP-JASA.pdf) introduced a multiple testing procedure that takes account for the correlation structure of the test statistics, but its estimation of  the  covariance structure itself is tricky under high-dimensional settings. In biostatistics fields, [*Surrogate Variable Analysis*](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161) (SVA) is quite popular, which is a huristic singluar value decomposition for multiple testing problems. It really does reduce the correlation between p-values, and the resulting distribution od the p-values becomes similar with a uniform distribution. However, somtimes its performance is unstable, since the methodology is ad hoc. Also, the inventor of the FDR control, Hochberg, published [a paper](https://projecteuclid.org/euclid.aos/1013699998) that asserts that  the FDR control is robust to some arbitrary correlation between test statistics. But their claim does not apply to the above exmaple, and any multiple testing procedure based on marginal test statistics fail to select the true model.
    
