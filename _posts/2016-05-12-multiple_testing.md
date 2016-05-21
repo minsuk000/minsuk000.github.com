@@ -44,7 +44,7 @@ as.vector(round(cor(X,y),3))
 To see the details of the problem, let me write some covariance structure of the model. Roughly speaking, the correlation coefficients betweeen the response and the covariates can be identified by the following quantity
 
 $$\begin{eqnarray*} 
-Cov({\bf X},y) &\approx&  Cov\left( {\bf X} , - X_1 - X_2 + X_3 + X_4 + X_5 \right)\\
+Cov({\bf X},y) &\approx&  Cov\left( {\bf X} ,  X_1 + X_2 - X_3 - X_4 - X_5 \right)\\
 &=&  \begin{bmatrix}
 1 & 0.5 & \dots & 0.5 \\
 0.5 & 1 & \dots & 0.5 \\
