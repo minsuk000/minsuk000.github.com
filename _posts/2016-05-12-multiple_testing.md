@@ -32,14 +32,14 @@ as.vector(round(cor(X,y),3))
 
 
 {% highlight text %}
-##  [1] -0.014 -0.010 -0.592 -0.583 -0.517 -0.238 -0.353 -0.248 -0.198 -0.211
-## [11] -0.224 -0.279 -0.238 -0.236 -0.263 -0.238 -0.215 -0.203 -0.295 -0.256
+##  [1] -0.034 -0.062 -0.653 -0.582 -0.677 -0.391 -0.304 -0.312 -0.313 -0.305
+## [11] -0.362 -0.350 -0.365 -0.307 -0.265 -0.368 -0.345 -0.355 -0.380 -0.382
 {% endhighlight %}
   I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. As suggested by [Fan and Lv (2008)](http://orfe.princeton.edu/~jqfan/papers/06/SIS.pdf), *Sure Independence Screening* (SIS) has been hilightened in many areas, but the above result shows that SIS may fail under some  settings where the covariates are correlated. 
 
    Intuitively, the first five correlation coefficients shoud be significantly larger than the others, since the true linear model includes the first five, but the first two correlation coefficients are almost zero. Since the t-statistic is a monotone transformation of the correlation coefficient, multiple testing procedures for the data set will never select the first two variables that are involved in the true model.
 
-##### What's going on here? 
+###### What's going on here? 
 
 To see the details of the problem, let me write some covariance structure of the model. Roughly speaking, the correlation coefficients betweeen the response and the covariates can be identified by the following quantity
 
@@ -84,7 +84,7 @@ where $${\bf X} = (X_1,\dots,X_p)^T$$.
 
    To overcome this issue, [Fan et al. (2012)](https://orfe.princeton.edu/~jqfan/papers/12/FDP-JASA.pdf) introduced a multiple testing procedure that takes account for the correlation structure of the test statistics, but its estimation of  the  covariance structure itself is tricky under high-dimensional settings. In biostatistics fields, [*Surrogate Variable Analysis*](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161) (SVA) is quite popular, which is a huristic singluar value decomposition for multiple testing problems. It really does reduce the correlation between p-values, and the resulting distribution od the p-values becomes similar with a uniform distribution. However, somtimes its performance is unstable, since the methodology is ad hoc. Also, the inventor of the FDR control, Hochberg, published [a paper](https://projecteuclid.org/euclid.aos/1013699998) that asserts that  the FDR control is robust to some arbitrary correlation between test statistics. But their claim does not apply to the above exmaple, and any multiple testing procedure based on marginal test statistics fail to select the true model.
    
-#### Conclusion
+##### Conclusion
   
   Even though multiple testing procedures such as the FDR control are useful in many applications, when the test statistics are correlated we really need to be careful to use the procedures. However, sadly, a lot of people just use the FDR or multiple testing for the high-dimensional model selection. It's no good !
  
