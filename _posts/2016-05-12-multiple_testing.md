@@ -53,11 +53,11 @@ Cov({\bf X},y) &\approx&  Cov\left( {\bf X} , - X_1 - X_2 + X_3 + X_4 + X_5 \rig
 0.5 &\dots &\dots & 1\\
 \end{bmatrix}
 \begin{bmatrix}
+1\\
+1\\
 -1\\
 -1\\
-1\\
-1\\
-1\\
+-1\\
 0\\
 \dots\\
 0
@@ -67,12 +67,12 @@ Cov({\bf X},y) &\approx&  Cov\left( {\bf X} , - X_1 - X_2 + X_3 + X_4 + X_5 \rig
 \begin{bmatrix}
 0\\
 0\\
-1\\
-1\\
-1\\
-0.5\\
+-1\\
+-1\\
+-1\\
+-0.5\\
 \dots\\
-0.5
+-0.5
 \end{bmatrix}
 ,
 \end{eqnarray*}
