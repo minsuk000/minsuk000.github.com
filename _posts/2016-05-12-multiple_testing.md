@@ -86,7 +86,8 @@ where $${\bf X} = (X_1,\dots,X_p)^T$$.
    
 ##### *Conclusion*
   
-  Even though multiple testing procedures such as the FDR control are useful in many applications, when the test statistics are correlated we really need to be careful to use the procedures. However, sadly, a lot of people just use the FDR or multiple testing for the high-dimensional model selection. It's no good !
+  Even though multiple testing procedures such as the FDR control are useful in many applications, when the test statistics are correlated we really need to be careful to use the procedures. However, sadly, a lot of people just use the FDR or multiple testing for the high-dimensional model selection without considering the correlation structure. It's no good ! 
+  
  
  
  
