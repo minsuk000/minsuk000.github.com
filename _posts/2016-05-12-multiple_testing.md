@@ -32,8 +32,8 @@ as.vector(round(cor(X,y),3))
 
 
 {% highlight text %}
-##  [1]  0.057  0.009 -0.546 -0.518 -0.578 -0.330 -0.209 -0.316 -0.271 -0.312
-## [11] -0.177 -0.236 -0.302 -0.356 -0.294 -0.194 -0.286 -0.320 -0.323 -0.277
+##  [1] -0.014 -0.076 -0.567 -0.627 -0.621 -0.280 -0.349 -0.390 -0.320 -0.346
+## [11] -0.247 -0.356 -0.322 -0.356 -0.275 -0.316 -0.279 -0.340 -0.265 -0.320
 {% endhighlight %}
   I calculated the absolute value of the marginal correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. As suggested by [Fan and Lv (2008)](http://orfe.princeton.edu/~jqfan/papers/06/SIS.pdf), *Sure Independence Screening* (SIS) has been hilightened in many areas, but the above result shows that SIS may fail under some  settings where the covariates are correlated. 
 
@@ -48,7 +48,7 @@ Cov({\bf X},y) &\approx&  Cov\left( {\bf X} , - X_1 - X_2 + X_3 + X_4 + X_5 \rig
 &=&  \begin{bmatrix}
 1 & 0.5 & \dots & 0.5 \\
 0.5 & 1 & \dots & 0.5 \\
-0.5 & \dots& 1 &\dots \\
+0.5 & \dots& \dots &\dots \\
 0.5& \dots  &  \dots & \dots\\
 0.5 &\dots &\dots & 1\\
 \end{bmatrix}
