@@ -8,7 +8,7 @@ comments: true
   
   Another popular testing-based approach for model selection is mutiple testing procedures. In linear models, by marginally considering each covariate, we can get $$p$$ number of t-statistics and its p-values, and we can select the variables whose p-value is small. Since Bonferroni's correction is too conservative, False Discovery Rate (FDR) control [(Benjamini and Hochberg, 1995)](http://www.math.tau.ac.il/~ybenja/MyPapers/benjamini_hochberg1995.pdf) has been popular, which controls the expected proportion of Type I errors among the rejected hypotheses.
   
-   However, these mutiple testing approaches have a critical problem when the tests statistics are correlated. Let me explain it with a simple example. Consider the model as 
+   However, these mutiple testing approaches could have a critical problem when the tests statistics are correlated. Let me explain it with a simple example. Consider the model as 
    
    $$Y = X\beta_0 + \epsilon,$$   
    
