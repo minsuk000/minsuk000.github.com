@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Prior Swapping for Data-independence Inference"
+comments: true
+---
+   Last week, I found an interesting (arxived paper)[https://arxiv.org/abs/1606.00787] about how to accelerate the posterior inference, which is called "prior swapping". The basic idea is that when you have a class of priors that result in a fast posterior sampling, such as  conjugate families, you can use posterior samples based on the easy priors to infer the posterior distribution from the priors which you want to use, but  cannot do it  because of computation. The authors pointed out that this procedure called "prior swapping" is computationally independent on the data, once the posterior samples from the prior, which results in easy posterior sampling, are given. Therefore, the computational time of the posterior inference could be remarkably reduced.
+   
+   I like the idea, but one unclear thing is the meaning of the terms "false prior" and "true prior". Maybe the "true" prior means the prior that results in the posterior we are interested in, but computationally challenging. However, the term "true" rather sounds like it involves in the data-generating process. Instead, they could've used a "target" prior. It's a minor comment.
+
