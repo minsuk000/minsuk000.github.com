@@ -1,13 +1,14 @@
 ---
-layout: post
-title: "Prior Swapping for Data-independence Inference"
-comments: true
+layout:  post
+title:  "Prior Swapping for Data-independence Inference"
+comments:  true
 ---
-   Last week, I found an interesting [arxived paper](https://arxiv.org/abs/1606.00787) about how to accelerate the posterior inference, which is called "prior swapping". The basic idea is that when you have a class of priors that result in a fast posterior sampling, such as  conjugate families, you can use posterior samples or the posterior distribution based on the easy priors to infer the posterior distribution from the priors which you really want to use, but  cannot do it  because of computational burden. The authors pointed out that this procedure called "prior swapping" is computationally independent on the data, once the posterior samples from the prior, which results in easy posterior sampling, are given. Therefore, the computational time of the posterior inference could be remarkably reduced.
+
+Last week, I found an interesting [arxived paper](https://arxiv.org/abs/1606.00787) about how to accelerate the posterior inference, which is called "prior swapping". The basic idea is that when you have a class of priors that result in a fast posterior sampling, such as  conjugate families, you can use posterior samples or the posterior distribution based on the easy priors to infer the posterior distribution from the priors which you really want to use, but  cannot do it  because of computational burden. The authors pointed out that this procedure called "prior swapping" is computationally independent on the data, once the posterior samples from the prior, which results in easy posterior sampling, are given. Therefore, the computational time of the posterior inference could be remarkably reduced.
    
-   I like the idea, but one unclear thing is the meaning of the terms "false prior" and "true prior". Maybe the "true" prior means the prior that results in the posterior we are interested in. However, the term "true" rather sounds like it involves in the data-generating process. Instead, they could've used a "target" prior. 
+I like the idea, but one unclear thing is the meaning of the terms "false prior" and "true prior". Maybe the "true" prior means the prior that results in the posterior we are interested in. However, the term "true" rather sounds like it involves in the data-generating process. Instead, they could've used a "target" prior. 
    
-   Another thing is that to approximate the "false" posterior distribution the procedure uses a kernel density estimation, but the authors do not provide practical criteria to choose the bandwidth. As the kernel density estimation is sensitive to the choice of the bandwodth, I am wondering why they did not consider it. They only provided some theoretical results regarding the bandwidth.
+ Another thing is that to approximate the "false" posterior distribution the procedure uses a kernel density estimation, but the authors do not provide practical criteria to choose the bandwidth. As the kernel density estimation is sensitive to the choice of the bandwodth, I am wondering why they did not consider it. They only provided some theoretical results regarding the bandwidth.
    
     
    
