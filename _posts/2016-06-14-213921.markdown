@@ -7,9 +7,9 @@ title: "How to prove the  Bayesian Model Selection Consistency in Linear Models"
  Today I am going to talk about some theory about Bayesian model selection. Consider a linear regression model as 
  
 $$
- y = X_{\bf k}\beta_{\bf k} + \epsilon,
+ y = X_{\bf k} \beta_{\bf k} + \epsilon,
 $$
- where $$\epsilon \sim N(0,\sigma^2I_n)$$.  We assume that only a fixed number of parameters  are non-zero, and note the size by $$s_0$$. Also, let the set of indices of the true non-zero parameters denoted by $${\bf  t}$$. For simplicity, the prior of parameters is a discrete mixture of a Gaussian with a zero mean and a variance $$\tau^2$$; i.e., $$\beta_j\sim N(0,\sigma^2\tau^2)$$ for $$j=1,\dots,p$$. Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections. The resulting posterior probability of each model  is 
+ where $$\epsilon \sim N(0,\sigma^2 I_n)$$. We assume that only a fixed number of parameters  are non-zero, and note the size by $$s_0$$. Also, let the set of indices of the true non-zero parameters denoted by $${\bf t}$$. For simplicity, the prior of parameters is a discrete mixture of a Gaussian with a zero mean and a variance $$\tau^2$$; i.e., $$\beta_j\sim N(0,\sigma^2\tau^2)$$ for $$j=1,\dots,p$$. Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections. The resulting posterior probability of each model  is 
 
 $$
 \pi({\bf k}\mid y) = \frac{m_{\bf k})(y)\pi({\bf k})}{\sum_{\bf l}m_{\bf l})(y)\pi({\bf l})}, 
@@ -28,39 +28,3 @@ The Bayesian model selection consistency is
   \pi({\bf t}\mid y)\overset{p}{\to} 1.
   $$
  
- It looks very simple. The posterior probability of the true model converges to one in probability. A brief of  the proof of the consistency follows as 
- 
- $$
-  \pi({\bf t}\mid y) &=&  \frac{m_{\bf t})(y)\pi({\bf t})}{\sum_{\bf k}m_{\bf k})(y)\pi({\bf k})}\\
-  &=&\frac{1}{1+\sum_{{\bf k}:{\bf t} \subset {\bf k}}\frac{m_{\bf k})(y)\pi({\bf k})}{m_{\bf t})(y)\pi({\bf t})}+\sum_{{\bf k}:{\bf t} \not\subset {\bf k}}\frac{m_{\bf k})(y)\pi({\bf k})}{m_{\bf t})(y)\pi({\bf t})}}. 
-$$
-
-Then, we have to show that i) $$\sum_{{\bf k}:{\bf t} \subset {\bf k}}\frac{m_{\bf k})(y)\pi({\bf k})}{m_{\bf t})(y)\pi({\bf t})}\overset{p}{\to}0$$ and ii) $$\sum_{{\bf k}:{\bf t} \not\subset {\bf k}}\frac{m_{\bf k})(y)\pi({\bf k})}{m_{\bf t})(y)\pi({\bf t})}\overset{p}{\to}0$$. The second one (under-fitting models case) is relatively easy to show, because models that miss any important variables will be exponentially penalized. Therefore, we focus on the first statement regarding over-fitting models. The commonly used technique is following as 
-
-$$
-P\left[ \sum_{{\bf k}:{\bf t} \subset {\bf k}}\frac{m_{\bf k})(y)\pi({\bf k})}{m_{\bf t})(y)\pi({\bf t})} >\epsilon \mid y \right] &approx& P\left[ \sum_{{\bf k}:{\bf t} \subset {\bf k}}p^{-\lambda(|{\bf k}| -|{\bf t}| )}\tau^{-(|{\bf k}| -|{\bf t}| )}\left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2}\exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \} >\epsilon \mid y \right]\\
-&=&  P\left[ \sum_{d=1}^{p-|{\bf t}|}\sum_{{\bf k}:{\bf t} \subset{\bf k}&|{\bf t} \setminus{\bf k}|=d} p^{-\lambda d}\tau^{-d}\left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \} >\epsilon \mid y \right]\\
- &\leq& \sum_{d=1}^{p-|{\bf t}|} P\left[  \sum_{{\bf k}:{\bf t} \subset{\bf k}&|{\bf t} \setminus{\bf k}|=d} p^{-\lambda d}\tau^{-d} \left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right], 
- $$
-where $$P_{\bf k}$$ is the projection matrix of $$X_{\bf k}$$. The proof will be completed, if we can show that 
- 
- $$
- P\left[  \sum_{{\bf k}:{\bf t} \subset{\bf k}&|{\bf t} \setminus{\bf k}|=d} p^{-\lambda d}\tau^{-d} \left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right] \succ p^{-1}.
- $$
- 
- Under some eigenvalue conditions on the gram matrix $$X_{\bf k}^TX_{\bf k}$$ for any arbitrary model $${\bf k}$$, the ratio of the determinants has a polynomial rate of $$n$$, which does not influence much under high-dimensional settings where $$p$$ increases much faster than $$n$$, so we ignore the term. Also, as $$\exp\{y^T(P_{\bf k}-P_{\bf t})y/\sigma^2 \} \sim \chi_{|{\bf k}|-|{\bf t}|}$$ when $${\bf t} \subset{\bf k}$$. The resulting quanty can be expressed as
- 
- $$
- P\left[  \sum_{{\bf k}:{\bf t} \subset{\bf k}&|{\bf t} \setminus{\bf k}|=d} p^{-\lambda d}\tau^{-d} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right]\\
- &\leq& \choose{p-|{\bf t}|}{d}p^{-\lambda d}\tau^{-d} \exp\{W/2 \}  > \epsilon/(p-|{\bf t}|)/\choose{p-|{\bf t}|}{d}p^{-\lambda d} \mid y \right],
- $$
- where $$W \sim \chi_{d}$$. Considering the tail behavior of the chi-square distribution, a sufficient condition for the model selection consistency is that 
-$$\lambda\log p + \log \tau  - 2\log p - \log\log p \to \infty$$. For example when $$\tau^2$$ is fixed and $$\lambda=2.1$$, the resulting model selection is consistent, and when $$\tau^2=p^{4.1}$$ and $\lambda =0$, it's consistent.  These results are coincident with [the BASAD](https://arxiv.org/pdf/1405.6545.pdf) and [Catillo et al.](https://arxiv.org/pdf/1403.0735.pdf).
-
-One interesting thing is that the model selection consistency does not depend on the noise variance $$\sigma^2$$. The multiplicity control only depends on the penalty on adding one extra variable to a model, and the size of penalty resulting in consistency is determined by the condition $$\lambda\log p + \log \tau  - 2\log p - \log\log p \to \infty$$.
-
-Of course, there are more detailed conditions, but I skipped them, because the purpose of this post is to provide a simple intuition about the model selection consistency. In next post, I will suggest an issue regarding this model selection consistency.
- 
- 
- 
-
