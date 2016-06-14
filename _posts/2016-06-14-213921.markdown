@@ -4,7 +4,7 @@ title: "How to prove the  Bayesian Model Selection Consistency in Linear Models"
 comments: true
 ---
  
- Today I am going to talk about some theory about Bayesian model selection. Consider a linear regression model as 
+ Today I am going to talk about some theory about Bayesian model selection. Consider a linear regression model given a model $${\bf k}$$ as 
  
 $$
  y = X_{\bf k}\beta_{\bf k} + \epsilon,
@@ -24,7 +24,7 @@ $$
 $$
 
 
- where $$ |{\bf k}| $$ is the model size of a model $${\bf k}$$.
+ where $$ | {\bf k} | $$ is the model size of a model $${\bf k}$$.
  
 The Bayesian model selection consistency is
   defined by
