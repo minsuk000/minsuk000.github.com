@@ -37,6 +37,10 @@ The Bayesian model selection consistency is
  
 $$\begin{eqnarray*}
 \pi({\bf t}\mid y) &=&  \frac{m_{\bf t}(y)\pi({\bf t})}{\sum_{\bf k}m_{\bf k}(y)\pi({\bf k})}\\
- &=& \left(1+\sum_{ {\bf k} : {\bf  t} \subset {\bf k} } \frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})} + \sum_{ {\bf k} : {\bf  t} \not \subset {\bf k} } \frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})}\right). 
+ &=& \left(1+\sum_{ {\bf k} : {\bf  t} \subset {\bf k} } \frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})} + \sum_{ {\bf k} : {\bf  t} \not \subset {\bf k} } \frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})}\right)^{-1}. 
   \end{eqnarray*}
 $$
+
+
+Then, we have to show that i) $$\sum_{ {\bf k} : {\bf  t} \subset {\bf k} } \frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})}\overset{p}{\to}0$$ and ii) $$\sum_{ {\bf k} : {\bf  t} \not\subset {\bf k} } \frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})}\overset{p}{\to}0$$. The second one (under-fitting models case) is relatively easy to show, because models that miss any important variables will be exponentially penalized. Therefore, we focus on the first statement regarding over-fitting models. The commonly used technique is following as 
+
