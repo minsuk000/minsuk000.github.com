@@ -16,13 +16,14 @@ $$
 
 The reason why I used $$M_0$$ and $$M_1$$, instead of more common notations $$H_0$$ and $$H_1$$ is that this can be viewed as a model selection problem; If $$\theta = 0$$, the model is going to be $$y_i \overset{i.i.d.}{\sim} N(0,1)$$ without any parameter, or the model is $$y_i \overset{i.i.d.}{\sim} N(theta,1)$$ with one parameter $$\theta$$, for $$i=1,\dots,n$$.  
 
-### *How can we compare two models $$M_0$$ and $$M_1$$? *
+### How can we compare two models $$M_0$$ and $$M_1$$? 
 
 As usually Bayesian methods do, the Bayes theorem can be applied to the model selection problem. Suppose that we consider a Gaussian prior $$N(0,1)$$ on the parameter $$\theta$$ under $$M_1$$. Then, the posterior probability of each model can be expressed as
 
-$$
+$$\begin{eqnarray*}
 \pi(M_0\mid y) &\propto& p(y\mid \theta = 0)\pi(M_0)\\
 \pi(M_1\mid y) & = & \int p(M_1, \theta\mid y )  d\theta \propto \int p( y  \mid  M_1, \theta )\pi(\theta\mid  M_1) \pi(M_1)  d\theta = m_1(y)\pi(y) ,
+\end{eqnarray*}
 $$  
 where $$\pi(\theta\mid M_1)$$ is the prior on $$\theta$$ and $$pi(M_k)$$ is the prior on the models, and $$m_k(y)$$ is the marginal likelihood of $$M_k$$ for $$k=0, 1$$.    
 
