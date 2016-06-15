@@ -70,7 +70,7 @@ $$\begin{eqnarray*}
  \end{eqnarray*}
  $$
 
- where $$W \sim \chi_{d}$$. Since $${ p - | { \bf t } | \choose d }$$ is almost like $$p^{d}$$, considering the tail behavior of the chi-square distribution, a sufficient condition for the model selection consistency is that $$\lambda\log p + \log \tau  - 2\log p - \log\log p \to \infty$$, as long as $$\log p O(n^\alpha)$$ with $$\alpha\in[0,1)$$. For example when $$\tau^2$$ is fixed and $$\lambda=2.1$$, the resulting model selection is consistent, and when $$\tau^2=p^{4.1}$$ and $$\lambda =0$$, it's consistent.  These results are coincident with [the BASAD](https://arxiv.org/pdf/1405.6545.pdf) and [Catillo et al.](https://arxiv.org/pdf/1403.0735).
+ where $$W \sim \chi_{d}$$. Since $${ p - | { \bf t } | \choose d }$$ is almost like $$p^{d}$$, considering the tail behavior of the chi-square distribution, a sufficient condition for the model selection consistency is that $$\lambda\log p + \log \tau  - 2\log p - \log\log p \to \infty$$, as long as $$\log p = O(n^ \alpha ) $$ with $$\alpha\in (0,1)$$. For example when $$\tau^2$$ is fixed and $$\lambda=2.1$$, the resulting model selection is consistent, and when $$\tau^2=p^{4.1}$$ and $$\lambda =0$$, it's consistent.  These results are coincident with [the BASAD](https://arxiv.org/pdf/1405.6545.pdf) and [Catillo et al.](https://arxiv.org/pdf/1403.0735).
 
 One interesting thing is that the model selection consistency does not depend on the noise variance $$\sigma^2$$. The multiplicity control only depends on the penalty on adding one extra variable to a model, and the size of penalty resulting in consistency is determined by the condition $$\lambda\log p + \log \tau  - 2\log p - \log\log p \to \infty$$.
 
