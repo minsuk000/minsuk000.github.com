@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Basics of Model Selection: Likelihood Testing and Multiple Testing"
+title: "Basics of Model Selection: Likelihood Testing and Multple Testing"
 output: html_document
 comments: true
 ---
-  I am going to talk about model selection from a statistical hypothesis perspective. A model can be defined by setting a likelihood. When two models are nested (one is a special case of the other one), the asymptotic distribution of -2 times log likelihood ratio converges to a chi-square distribution, so the statistical hypothesis can be constructed. Even though the likelihood ratio test is a simple and strong tool for model selection, it can be only applied to nested models, and it is not appropriate to use for the comparision of multiple models.
+ 
+ I am going to talk about model selection from a statistical hypothesis perspective. A model can be defined by setting a likelihood. When two models are nested (one is a special case of the other one), the asymptotic distribution of -2 times log likelihood ratio converges to a chi-square distribution, so the statistical hypothesis can be constructed. Even though the likelihood ratio test is a simple and strong tool for model selection, it can be only applied to nested models, and it is not appropriate to use for the comparision of multiple models.
   
   Another popular testing-based approach for model selection is mutiple testing procedures. In linear models, by marginally considering each covariate, we can get $$p$$ number of t-statistics and its p-values, and we can select the variables whose p-value is small. Since Bonferroni's correction is too conservative, False Discovery Rate (FDR) control [(Benjamini and Hochberg, 1995)](http://www.math.tau.ac.il/~ybenja/MyPapers/benjamini_hochberg1995.pdf) has been popular, which controls the expected proportion of Type I errors among the rejected hypotheses.
   
