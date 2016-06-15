@@ -24,7 +24,7 @@ $$
 $$
 
 
- where $$ \bar {\bf k} \bar $$ is the model size of a model $${\bf k}$$.
+ where $$ \vert {\bf k} \vert$$ is the model size of a model $${\bf k}$$.
  
 The Bayesian model selection consistency is
   defined by
