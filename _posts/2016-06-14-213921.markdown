@@ -55,5 +55,5 @@ $$\begin{eqnarray*}
 where $$P_{\bf k}$$ is the projection matrix of $$X_{\bf k}$$, and $${\bf k} \setminus {\bf t}$$ is the model $${\bf k}$$ without variable in $${\bf t}$$. The proof will be completed, if we can show that 
 
 $$
-P\left[  \sum_{ {\bf k} : {\bf t} \subset{\bf k} \& | {\bf k} \setminus {\bf t} | = d } p^{-\lambda d}\tau^{-d} \left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \vert y \right]\succ p^{-1}
+P\left[  \sum_{ {\bf k} : {\bf t} \subset{\bf k} \& | {\bf k} \setminus {\bf t} | = d } p^{-\lambda d}\tau^{-d} \left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right]\prec p^{-1}
 $$
