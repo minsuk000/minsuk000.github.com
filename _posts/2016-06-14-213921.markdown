@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "How to prove the  Bayesian Model Selection Consistency in Linear Models"
-comments: true
+output: html_document
+comments: true
 ---
+
  
  Today I am going to talk about some theory about Bayesian model selection. Consider a linear regression model given a model $${\bf k}$$ as 
  
@@ -56,7 +58,7 @@ $$\begin{eqnarray*}
 where $$P_{\bf k}$$ is the projection matrix of $$X_{\bf k}$$, and $${\bf k} \setminus {\bf t}$$ is the model $${\bf k}$$ without variable in $${\bf t}$$. The proof will be completed, if we can show that 
 
 $$
-P\left[  \sum_{ {\bf k} : {\bf t} \subset{\bf k} \& | {\bf k} \setminus {\bf t} | = d } p^{-\lambda d}\tau^{-d} \left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right]\prec p^{-1}.
+P\left[  \sum_{ {\bf k} : {\bf t} \subset{\bf k} \& | {\bf k} \setminus {\bf t} | = d } p^{-\lambda d}\tau^{-d} \left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right] =  o(p^{-1}).
 $$
 
 Under some eigenvalue conditions on the gram matrix $$X_{\bf k}^TX_{\bf k}$$ for any arbitrary model $${\bf k}$$, the ratio of the determinants has a polynomial rate of $$n$$, which does not influence much under high-dimensional settings where $$p$$ increases much faster than $$n$$, so we ignore the term. Also, as $$y^T(P_{\bf k}-P_{\bf t})y/\sigma^2 \sim \chi_{ \vert {\bf k} \vert -  \vert {\bf t} \vert }^2$$ when $${ {\bf t} \subset {\bf k} }$$. The resulting quanty can be expressed as
@@ -64,7 +66,13 @@ Under some eigenvalue conditions on the gram matrix $$X_{\bf k}^TX_{\bf k}$$ for
  
 $$\begin{eqnarray*}
 && P\left[  \sum_{ {\bf k} : {\bf t} \subset {\bf k} \& | {\bf t} \setminus {\bf k} | = d } p^{-\lambda d}\tau^{-d} \exp\{y^T(P_{ \bf k}-P_{ \bf t })y/(2\sigma^2) \}  > \epsilon/(p-|{ \bf t } | ) \mid y \right]\\
-  &\leq&  { p - | { \bf t } | \choose d } P\left[ p^{-\lambda d}\tau^{-d} \exp\{ W/2 \}  > \epsilon/{ p-| { \bf t } | \choose d }  \mid y \right],
+  &\leq&  { p - | { \bf t } | \choose d } P\left[ p^{-\lambda d}\tau^{-d} \exp\{ W/2 \}  > \epsilon{ p-| { \bf t } | \choose d }^{-1}  \mid y \right],
  \end{eqnarray*}
  $$
- 
+
+ where $$W \sim \chi_{d}$$. Considering the tail behavior of the chi-square distribution, a sufficient condition for the model selection consistency is that 
+$$\lambda\log p + \log \tau  - 2\log p - \log\log p \to \infty$$. For example when $$\tau^2$$ is fixed and $$\lambda=2.1$$, the resulting model selection is consistent, and when $$\tau^2=p^{4.1}$$ and $\lambda =0$, it's consistent.  These results are coincident with [the BASAD](https://arxiv.org/pdf/1405.6545.pdf) and [Catillo et al.](https://arxiv.org/pdf/1403.0735).
+
+One interesting thing is that the model selection consistency does not depend on the noise variance $$\sigma^2$$. The multiplicity control only depends on the penalty on adding one extra variable to a model, and the size of penalty resulting in consistency is determined by the condition $$\lambda\log p + \log \tau  - 2\log p - \log\log p \to \infty$$.
+
+Of course, there are more detailed conditions, but I skipped them, because the purpose of this post is to provide a simple intuition about the model selection consistency. In next post, I will suggest an issue regarding this model selection consistency.
