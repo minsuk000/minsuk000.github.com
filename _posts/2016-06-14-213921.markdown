@@ -35,11 +35,6 @@ The Bayesian model selection consistency is
  
   It looks very simple. The posterior probability of the true model converges to one in probability. A brief of  the proof of the consistency follows as 
  
-$$\begin{eqnarray*}
-\pi({\bf t}\mid y) &=&  \frac{m_{\bf t}(y)\pi({\bf t})}{\sum_{\bf k}m_{\bf k}(y)\pi({\bf k})}\\
- &=& \left(1+\sum_{ {\bf k} : {\bf  t} \subset {\bf k} } \frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})} + \sum_{ {\bf k} : {\bf  t} \not \subset {\bf k} } \frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})}\right)^{-1}. 
-  \end{eqnarray*}
-$$
 
 
 where $$P_{\bf k}$$ is the projection matrix of $$X_{\bf k}$$, and $${\bf k} \setminus {\bf t}$$ is the model $${\bf k}$$ without variable in $${\bf t}$$. The proof will be completed, if we can show that 
