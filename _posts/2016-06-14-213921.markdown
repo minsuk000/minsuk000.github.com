@@ -4,5 +4,4 @@ title: "How to prove the  Bayesian Model Selection Consistency in Linear Models"
 comments: true
 ---
  
- Today I am going to talk about some theory about Bayesian model selection. Consider a linear regression model given a model $${\bf k}$$ as 
- 
+ Today I am going to talk about some theory about Bayesian model selection. Consider a linear regression model given a model 
