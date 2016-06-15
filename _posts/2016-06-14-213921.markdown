@@ -58,4 +58,4 @@ $$
 P\left[  \sum_{ {\bf k} : {\bf t} \subset{\bf k} \& | {\bf k} \setminus {\bf t} | = d } p^{-\lambda d}\tau^{-d} \left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right]\prec p^{-1}.
 $$
 
-  Under some eigenvalue conditions on the gram matrix for any arbitrary model $${\bf k}$$, the ratio of the determinants has a polynomial rate of $$n$$, which does not influence much under high-dimensional settings where $$p$$ increases much faster than $$n$$, 
+  Under some eigenvalue conditions on the gram matrix for any arbitrary model , the ratio of the determinants has a polynomial rate of $$n$$, which does not influence much under high-dimensional settings where $$p$$ increases much faster than $$n$$, 
