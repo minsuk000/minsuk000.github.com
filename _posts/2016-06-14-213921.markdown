@@ -64,8 +64,8 @@ Under some eigenvalue conditions on the gram matrix $$X_{\bf k}^TX_{\bf k}$$ for
  
  
  $$\begin{eqnarray*}
- P\left[  \sum_{{\bf k}:{\bf t} \subset{\bf k}&|{\bf t} \setminus{\bf k}|=d} p^{-\lambda d}\tau^{-d} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right]\\
- &\leq& \choose{p-|{\bf t}|}{d}p^{-\lambda d}\tau^{-d} \exp\{W/2 \}  > \epsilon/(p-|{\bf t}|)/\choose{p-|{\bf t}|}{d}p^{-\lambda d} \mid y \right],
+ P\left[  \sum_{ {\bf k} : {\bf t} \subset{\bf k} & | {\bf t} \setminus{\bf k}| = d } p^{-\lambda d}\tau^{-d} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right]\\
+ &\leq& {p-|{\bf t}|} \choose {d} p^{-\lambda d}\tau^{-d} \exp\{W/2 \}  > \epsilon/(p-|{\bf t}|)/{p-|{\bf t}|} \choose {d}p^{-\lambda d} \mid y \right],
  \end{eqnarray*}
  $$
  
