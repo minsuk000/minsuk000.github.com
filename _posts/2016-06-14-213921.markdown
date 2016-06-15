@@ -37,5 +37,5 @@ The Bayesian model selection consistency is
  
 $$
  \pi({\bf t}\mid y) &=&  \frac{m_{\bf t}(y)\pi({\bf t})}{\sum_{\bf k}m_{\bf k}(y)\pi({\bf k})}\\
- \frac{m_{\bf t}(y)\pi({\bf t})}{\sum_{\bf k}m_{\bf k}(y)\pi({\bf k})}
+ &=&\frac{m_{\bf t}(y)\pi({\bf t})}{\sum_{\bf k}m_{\bf k}(y)\pi({\bf k})}
 $$
