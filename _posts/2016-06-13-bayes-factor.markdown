@@ -14,7 +14,7 @@ $$
 M_0: \: \theta = 0 \:\:vs\:\:M_1: \: \theta \neq 0  
 $$
 
-The reason why I used $$M_0$$ and $$M_1$$, instead of more common notations $$H_0$$ and $$H_1$$ is that this can be viewed as a model selection problem; If $$\theta = 0$$, the model is going to be $$y_i \overset{i.i.d.}{\sim} N(0,1)$$ without any parameter, or the model is $$y_i \overset{i.i.d.}{\sim} N(theta,1)$$ with one parameter $$\theta$$, for $$i=1,\dots,n$$.  
+The reason why I used $$M_0$$ and $$M_1$$, instead of more common notations $$H_0$$ and $$H_1$$ is that this can be viewed as a model selection problem; If $$\theta = 0$$, the model is going to be $$y_i \overset{i.i.d.}{\sim} N(0,1)$$ without any parameter, or the model is $$y_i \overset{i.i.d.}{\sim} N(\theta,1)$$ with one parameter $$\theta$$, for $$i=1,\dots,n$$.  
 
 ### How can we compare two models $$M_0$$ and $$M_1$$? 
 
@@ -32,7 +32,7 @@ where $$\pi(\theta\mid M_1)$$ is the prior on $$\theta$$ and $$pi(M_k)$$ is the 
 Then, a problem arises. We have to choose the prior on $$\theta$$. Which prior do we use? Even if we choose the prior, we have to choose its hyperparameter, and in many cases, the resulting posterior inference is sensitive to the choice of the hyperparameter. To simplify the problem, consider a Gaussian prior with a zero mean and a $$\tau^2$$ variance on $$\theta$$; $$\theta \sim N(0,\tau^2)$$. The resulting posterior probability of $$M_0$$ is 
 
 $$\begin{eqnarray*}
-pi(M_0\mid y) &=&  \frac{m_0(y)\pi(M_0)}{m_0(y)\pi(M_0)+m_1(y)\pi(M_1)}\\
+\pi(M_0\mid y) &=&  \frac{m_0(y)\pi(M_0)}{m_0(y)\pi(M_0)+m_1(y)\pi(M_1)}\\
 &=&\frac{1}{1+BF_{10}(y)},
 \end{eqnarray*}
 $$ 
