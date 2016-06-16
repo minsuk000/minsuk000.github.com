@@ -32,10 +32,10 @@ The Bayesian model selection consistency is
   defined by
   
   $$
-  \pi({\bf t}\mid y)\overset{p}{\to} 1.
+  \pi({\bf t}\mid y)\overset{p}{\to} 1,
   $$
  
- The posterior probability of the true model converges to one in probability. A brief of  the proof of the consistency follows as 
+ which means that the posterior probability of the true model converges to one in probability. A brief procedure of  a proof of the consistency follows as 
  
 $$\begin{eqnarray*}
 \pi({\bf t}\mid y) &=&  \frac{m_{\bf t}(y)\pi({\bf t})}{\sum_{\bf k}m_{\bf k}(y)\pi({\bf k})}\\
