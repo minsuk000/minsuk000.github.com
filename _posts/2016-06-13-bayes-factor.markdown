@@ -23,7 +23,7 @@ As usually Bayesian methods do, the Bayes theorem can be applied to the model se
 $$\begin{eqnarray*}
 \pi(M_0\mid y) &\propto& p(y\mid \theta = 0)\pi(M_0)\\
 \pi(M_1\mid y) & = & \int p(M_1, \theta\mid y )  d\theta \\
-&\propto& \int p( y  \mid  M_1, \theta )\pi(\theta\mid  M_1) \pi(M_1)  d\theta = m_1(y)\pi(y),
+&\propto& \int p( y  \mid  M_1, \theta )\pi(\theta\mid  M_1) \pi(M_1)  d\theta = m_1(y)\pi(M_1),
 \end{eqnarray*}
 $$  
 
