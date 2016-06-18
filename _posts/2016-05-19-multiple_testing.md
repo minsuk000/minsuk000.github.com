@@ -38,7 +38,7 @@ as.vector(round(cor(X,y),3))
 {% endhighlight %}
   I calculated the marginal sample correlation between the response $$y$$ and each individual covariate $$X_j$$ for $$j=1,\dots,p$$. 
 
-   Intuitively, the first five sample correlation coefficients shoud be more significant than the others, since the true model includes the first five, but the first two correlation coefficients are almost zero. Since the t-statistic is a monotone transformation of the abolute value of the correlation coefficient, multiple testing procedures for the data set, including the FDR control, will never select the first two variables that are in the true model. As suggested by [Fan and Lv (2008)](http://orfe.princeton.edu/~jqfan/papers/06/SIS.pdf), *Sure Independence Screening* (SIS) has been highlightened in many areas, but the above result shows that SIS may fail under some  settings where the covariates are correlated. 
+   Intuitively, the first five sample correlation coefficients shoud be more significant than the others, since the true model includes the first five, but the first two correlation coefficients are almost zero: 0.018 and 0.069. Since the t-statistic is a monotone transformation of the abolute value of the correlation coefficient, multiple testing procedures for the data set, including the FDR control, will never select the first two variables that are in the true model. As suggested by [Fan and Lv (2008)](http://orfe.princeton.edu/~jqfan/papers/06/SIS.pdf), *Sure Independence Screening* (SIS) has been highlightened in many areas, but the above result shows that SIS may fail under some  settings where the covariates are correlated. 
 
 ###### *What's going on here?* 
 

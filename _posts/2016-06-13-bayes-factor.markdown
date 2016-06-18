@@ -37,7 +37,7 @@ $$\begin{eqnarray*}
 \end{eqnarray*}
 $$ 
 
-where $$BF_{10}(y)= m_1(y)\pi(M_1)/\{m_0(y)\pi(M_0)\}$$ is the Bayes factor of the hypothesis testing. The Bayes factor has a closed form as
+where $$BF_{10}(y)= m_1(y)\pi(M_1)/\{m_0(y)\pi(M_0)\}$$ is the Bayes factor of the hypothesis testing. In this simple setting, the Bayes factor has a closed form as
 
 $$
 BF_{10}(y) = \tau^{-1}(n+1/\tau^2)^{-1/2}\exp\{ (n+1/\tau^2)\widetilde y^2/(2\sigma^2) \}\frac{\pi(M_1)}{\pi(M_0)},
