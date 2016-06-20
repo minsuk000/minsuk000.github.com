@@ -18,7 +18,7 @@ $$
 P(\sum_{i=1}^n X_i/n > \epsilon) \leq \sum_{i=1}^n P( X_i > \epsilon) \to \infty.
 $$
  
- This result is really disappointing, because we know that by the Weak Law of Large Number (WLLN) or the CLT, we know that the above probability converges to zero. However, the bound from the technique described in the above results in infinity bounds. 
+ This result is really disappointing, because we know that by the Weak Law of Large Number (WLLN) or the CLT, we know that the above probability converges to zero. However, the bound from the technique described in the above results in an infinity bound. 
 
 #### Conclusion
 Even though the above technique is essential to prove the model selection consistency in high-dimensional settings, it results in  too loose bounds on the concentration of the model probabilities. To relax the conditions applied in the proof of the model selection consistency, we might have to consider some  new approaches.    
