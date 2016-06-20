@@ -6,7 +6,7 @@ comments: true
 ---
 
 
-In  [the previous post]({% post_url 2016-06-14-213921 %}), I provided a technique that is  commonly used to prove the model selection consistency for  high-dimensional settings. The key ingredient of the proof was the following:
+In  [the previous post]({% post_url 2016-06-14-213921 %}), I provided a technique that is  commonly used to prove the model selection consistency for  high-dimensional settings. The key ingredient of the proof was the following bound:
 
 $$
 P(\sum_{i=1}^n A_i > \epsilon) \leq \sum_{i=1}^n P(A_i>\epsilon/n),
