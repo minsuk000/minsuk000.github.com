@@ -1,0 +1,28 @@
+---
+layout: post
+title: "An issue about the proof of the model selection consistency"
+output: html_document
+comments: true
+---
+
+
+In  [the previous post]({% post_url 2016-06-14-213921 %}), I provided a technique that is  commonly used to prove the model selection consistency for  high-dimensional settings. The key ingredient of the proof was the following:
+
+$$
+P(\sum_{i=1}^n A_i > \epsilon) \leq \sum_{i=1}^n P(A_i>\epsilon/n),
+$$
+
+where $$A_i$$ can be any arbitrary random variable for $$i=1,\dots,n$$. It is the only way to take account for the cardinality of the enormous number of models in the proof, at least to my best knowledge, but  this bound is so crude that it cannot be applied to very simple settings. For example, consider the following simple example where the Central Limit Theorem (CLT) can be applied. Suppose $$X_i$$ is i.i.d. from a standard Gaussian distribution $$N(0,1)$$ for $$i=1,\dots,n$$. Then,
+
+$$
+P(\sum_{i=1}^n X_i/n > \epsilon) \leq \sum_{i=1}^n P( X_i > \epsilon) \to \infty.
+$$
+ 
+ This result is really disappointing, because we know that by the Weak Law of Large Number (WLLN) or the CLT, we know that the above probability converges to zero. However, the bound from the technique described in the above results in infinity bounds. 
+
+#### Conclusion
+Even though the above technique is essential to prove the model selection consistency in high-dimensional settings, it results in  too loose bounds on the concentration of the model probabilities. To relax the conditions applied in the proof of the model selection consistency, we might have to consider some  new approaches.    
+
+
+
+
