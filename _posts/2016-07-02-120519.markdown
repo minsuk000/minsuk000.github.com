@@ -9,7 +9,7 @@ Penalized likelihood methods have been popular in many statistical inference pro
 Suppose that the likelihood of the observed data is denoted by $$L(y\mid\theta)$$  with the parameter of interest $$\theta$$. The estimator can be expressed in the following:
 
 $$
-\widehat{\theta} = \underset{\theta}{\operatorname{argmin}} -2L(y\mid \theta) + p_\lambda(\theta),
+\widehat{\theta} = \underset{\theta}{\operatorname{argmin}} -2\timesL(y\mid \theta) + p_\lambda(\theta),
 $$   
 
  where $$p_\lambda(\cdot)$$ is the penalty function with the tuning parameter $$\lambda$$ that controls the strength of the penalty. The only difference between the maximum likelihood estimator and the penalized maximum likelihood estimator is that the objective function of the penalized version contains the penalty part $$p_\lambda(\theta)$$, while that of the maximum likelihood estimator doesn't. 
