@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Penalized Likelihood Estimators and Shrinkage Priors: LASSO and Bayesian LASSO"
+comments: true
+---
+
+Penalized likelihood methods have been popular in many statistical inference problems. The advantage of using penalized likelihood estimators is that it could reduce  the Mean Square Error (MSE) by balancing the bias-variance trade-off. Even though unbiased estimators or asymptotically unbiased estimators (such as maximum likelihood estimators) have desirable properties, the  variance of those estimators could be undesirably large so that the resulting MSE is large too. The idea of the penalized likelihood estimator is to reduce the variance by compromising the bias of the estimator.  
+
+Suppose that the likelihood of the observed data is denoted by $$L(y\mid\theta)$$  with the parameter of interest $$\theta$$. The estimator can be expressed in the following:
+
+$$
+\widehat{\theta} = \underset{\theta}{\operatorname{argmin}} -L(y\mid \theta) + p_\lambda(\theta),
+$$   
+ where $$p_\lambda(\cdot)$$ is the penalty on $$\theta$$ with the tuning parameter $$\lambda$$ that controls the strength of the penalty. 
+ 
+ Let me give a simple example of this idea. Suppose $$y_i \overset{i.i.d.}{\sim} N(\theta,1)$$ for $$i=1,\dots,n$$. Consider three penalties: $$L_0$$ penalty ($$p_\lambda(t) = \lambda I( \theta\neq 0 )$$), $$L_1$$ penalty ($$p_\lambda(t) = \lambda \vert\theta\vert$$) and  $$L_2$$ penalty. 
+
+
+
+
+
