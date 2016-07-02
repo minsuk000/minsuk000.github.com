@@ -5,6 +5,7 @@ comments: true
 ---
 
 Penalized likelihood methods have been popular in many statistical inference problems. The advantage of using penalized likelihood estimators is that it could reduce  the Mean Square Error (MSE) by balancing the bias-variance trade-off. Even though unbiased estimators or asymptotically unbiased estimators (such as maximum likelihood estimators) have desirable properties, the  variance of those estimators could be undesirably large so that the resulting MSE is large too. The idea of the penalized likelihood estimator is to reduce the variance by compromising the bias of the estimator.  
+
 Suppose that the likelihood of the observed data is denoted by $$L(y\mid\theta)$$  with the parameter of interest $$\theta$$. The estimator can be expressed in the following:
 
 $$
