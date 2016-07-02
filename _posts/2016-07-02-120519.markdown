@@ -16,6 +16,7 @@ $$
  Let me give you a simple example of this idea. Suppose $$y_i \overset{i.i.d.}{\sim} N(\theta,1)$$ for $$i=1,\dots,n$$. Consider three penalties: $$L_0$$ penalty ($$p_\lambda(\theta) = \lambda I( \theta\neq 0 )$$), $$L_1$$ penalty ($$p_\lambda(\theta) = \lambda \vert\theta\vert$$) and  $$L_2$$ penalty ($$p_\lambda(\theta) = \lambda \theta^2$$), where $$I(\cdot)$$ is the indicator function. Then the resulting objective function of each estimator can be expressed as
  
  $$
+ \mbox{$L_0$ penalty: } \widehat \theta_{L_0} =  \underset{\theta}{\operatorname{argmin}} \sum_{i=1}^n  (y_i-\theta)^2 + \lambda I(\theta \neq 0)\\
  \mbox{$L_0$ penalty: } \widehat \theta_{L_0} =  \underset{\theta}{\operatorname{argmin}} \sum_{i=1}^n  (y_i-\theta)^2 + \lambda I(\theta \neq 0)
  $$
  
