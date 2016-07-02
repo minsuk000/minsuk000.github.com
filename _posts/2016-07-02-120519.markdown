@@ -17,7 +17,7 @@ $$
  
  $$
  \mbox{$L_0$ penalty: } \widehat \theta_{L_0} =  \underset{\theta}{\operatorname{argmin}} \sum_{i=1}^n  (y_i-\theta)^2 + \lambda I(\theta \neq 0)\\
- \mbox{$L_0$ penalty: } \widehat \theta_{L_0} =  \underset{\theta}{\operatorname{argmin}} \sum_{i=1}^n  (y_i-\theta)^2 + \lambda I(\theta \neq 0)
+ \mbox{$L_1$ penalty: } \widehat \theta_{L_1} =  \underset{\theta}{\operatorname{argmin}} \sum_{i=1}^n  (y_i-\theta)^2 + \lambda |\theta|
  $$
  
  
