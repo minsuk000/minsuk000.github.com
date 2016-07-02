@@ -13,12 +13,11 @@ $$
 
  where $$p_\lambda(\cdot)$$ is the penalty function with the tuning parameter $$\lambda$$ that controls the strength of the penalty. The only difference between the maximum likelihood estimator and the penalized maximum likelihood estimator is that the objective function of the penalized version contains the penalty part $$p_\lambda(\theta)$$, while that of the maximum likelihood estimator doesn't. 
  
- Let me give you a simple example of this idea. Suppose $$y_i \overset{i.i.d.}{\sim} N(\theta,1)$$ for $$i=1,\dots,n$$. Consider three penalties: $$L_0$$ penalty ($$p_\lambda(\theta) = \lambda I( \theta\neq 0 )$$), $$L_1$$ penalty ($$p_\lambda(\theta) = \lambda \vert\theta\vert$$) and  $$L_2$$ penalty (($$p_\lambda(\theta) = \lambda \theta^2$$)). Then the resulting objective function of each estimator can be expressed as
+ Let me give you a simple example of this idea. Suppose $$y_i \overset{i.i.d.}{\sim} N(\theta,1)$$ for $$i=1,\dots,n$$. Consider three penalties: $$L_0$$ penalty ($$p_\lambda(\theta) = \lambda I( \theta\neq 0 )$$), $$L_1$$ penalty ($$p_\lambda(\theta) = \lambda \vert\theta\vert$$) and  $$L_2$$ penalty ($$p_\lambda(\theta) = \lambda \theta^2$$). Then the resulting objective function of each estimator can be expressed as
  
  $$
- \begin{cases}
-\end{cases}
- $$
+ \mbox{$$L_0$$ penalized estimator: }
+  $$
  
  
 
