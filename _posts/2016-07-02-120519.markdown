@@ -27,9 +27,9 @@ $$
   
 $$
  \begin{eqnarray*}
- \mbox{$L_0$ penalty: } &&\widehat \theta_{L_0} =  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda I(\theta \neq 0)\\
- \mbox{$L_1$ penalty: } && \widehat \theta_{L_1} =  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda |\theta|\\
- \mbox{$L_2$ penalty: } && \widehat \theta_{L_2} =  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda \theta^2.
+ \widehat \theta_{L_0} &=&  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda I(\theta \neq 0)\\
+   \widehat \theta_{L_1} &=&  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda |\theta|\\
+ \widehat \theta_{L_2} &=&  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda \theta^2.
  \end{eqnarray*}
  $$
   
