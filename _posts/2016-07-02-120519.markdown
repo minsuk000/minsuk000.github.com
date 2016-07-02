@@ -23,7 +23,7 @@ $$
  \end{eqnarray*}
  $$
  
- Equivalently, since $$\sum_{i=1}^n  (y_i-\theta)^2 = \sum_{i=1}^n(y_i -\bar y)^2+ n (\bar y -\theta)^2$$, the above estimatros  can be expressed as 
+ Equivalently, since $$\sum_{i=1}^n  (y_i-\theta)^2 = \sum_{i=1}^n(y_i -\bar y)^2+ n (\bar y -\theta)^2$$, where $$\bar y$$ is the sample mean,the above estimatros  can be expressed as 
   
 $$
  \begin{eqnarray*}
