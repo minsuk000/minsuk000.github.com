@@ -68,7 +68,7 @@ To help the understainding, I attached Figure 1 that illustrates the above estim
  
  My answer is that the $$L_0$$ is better, if possible.   
   
-The $$L_0$$ penalized estimator enjoys some desirable properties such as the oracle properties: (Yongdai Kim)[http://oldstat.snu.ac.kr/ydkim/]'s great explanation of this concept is in (this slides)[https://www.birs.ca/workshops/2011/11w5051/files/12_yongdai_kim_on_weak_and_strong_oracle_property.pdf]. However, when we consider a large number of  parameters, sometimes larger than the sample size, it is computationally impossible 
+The $$L_0$$ penalized estimator enjoys some desirable properties such as the oracle properties: [Yongdai Kim](http://oldstat.snu.ac.kr/ydkim/)'s great explanation of this concept is in [this slides](https://www.birs.ca/workshops/2011/11w5051/files/12_yongdai_kim_on_weak_and_strong_oracle_property.pdf). However, when we consider a large number of  parameters, sometimes larger than the sample size, it is computationally impossible 
  
 
 
