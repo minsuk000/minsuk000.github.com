@@ -32,8 +32,22 @@ $$
    \widehat \theta_{L_1} &=&  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda |\theta|\\
  \widehat \theta_{L_2} &=&  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda \theta^2.
  \end{eqnarray*}
- $$
+$$
   
+The resulting estimators have closed forms as 
+
+$$
+ \begin{eqnarray*}
+ \widehat \theta_{L_0} &=&  \begin{cases} a\\
+ s\\
+ \end{cases}
+ \\
+   \widehat \theta_{L_1} &=&  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda |\theta|\\
+ \widehat \theta_{L_2} &=&  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda \theta^2.
+ \end{eqnarray*}
+$$
+
+
 
 
 
