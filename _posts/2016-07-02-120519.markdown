@@ -64,8 +64,11 @@ To help the understainding, I attached Figure 1 that illustrates the above estim
  
 #### Which one is better? $$L_0$$, $$L_1$$, or $$L_2$$ ?
 
- In the previous section, I mentioned that the $$L_0$$ and $$L_1$$ penalized estimators are sparse estimators, but the $$L_2$$ penalized estimator is not. The sparsity is useful when we have to consider model selection problems, since in many settings a sparsity pattern of the parameters determines a model, for example in linear regression models the zero regression parameters indicates that the corresponding independent variables are irrelavant to the response in the regression model. Then, next natural question is "Which one is better among the $$L_0$$ and $$L_1$$ penalized estimators?"   
+ In the previous section, I mentioned that the $$L_0$$ and $$L_1$$ penalized estimators are sparse estimators, but the $$L_2$$ penalized estimator is not. The sparsity is useful when we have to consider model selection problems, since in many settings a sparsity pattern of the parameters determines a model, for example in linear regression models the zero regression parameters indicates that the corresponding independent variables are irrelavant to the response in the regression model. Then, next natural question is "**Which one is better among the $$L_0$$ and $$L_1$$ penalized estimators?**" 
+ 
+ My answer is that the $$L_0$$ is better, if possible.   
   
+The $$L_0$$ penalized estimator enjoys some desirable properties such as the oracle properties: (Yongdai Kim)[http://oldstat.snu.ac.kr/ydkim/]'s great explanation of this concept is in (this slides)[https://www.birs.ca/workshops/2011/11w5051/files/12_yongdai_kim_on_weak_and_strong_oracle_property.pdf]. However, when we consider a large number of  parameters, sometimes larger than the sample size, it is computationally impossible 
  
 
 
