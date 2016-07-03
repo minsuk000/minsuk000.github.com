@@ -38,8 +38,8 @@ The resulting estimators have closed forms as
 
 $$
  \begin{eqnarray*}
- \widehat \theta_{L_0} &=&  \begin{cases} 0,\:\:\mbox{ if $|\bar y|< \lambda/n $}\\
- s\\
+ \widehat \theta_{L_0} &=&  \begin{cases} 0,\:\:\mbox{ if $|\bar y|< (\lambda/n)^{1/2} $}\\
+ \bar y,\:\:\mbox{ if $|\bar y|< (\lambda/n)^{1/2} $}\\
  \end{cases}
  \\
    \widehat \theta_{L_1} &=&  \underset{\theta}{\operatorname{argmin}} n (\bar y -\theta)^2 + \lambda |\theta|\\
