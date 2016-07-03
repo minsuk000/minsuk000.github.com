@@ -42,10 +42,12 @@ $$
  \bar y,\:\:\mbox{ if $|\bar y|\geq (\lambda/n)^{1/2} $}
  \end{cases}
  ,\\
+ \medskip
    \widehat \theta_{L_1} &=&  \begin{cases} 0,\:\:\mbox{ if $|\bar y|< \lambda/n $}\\
  \bar y - \frac{\lambda}{n}sgn(\bar y),\:\:\mbox{ if $|\bar y|\geq \lambda/n $}
  \end{cases}
 , \\
+\medskip
  \widehat \theta_{L_2} &=& \frac{n}{n+\lambda}\bar y,
  \end{eqnarray*}
 $$
