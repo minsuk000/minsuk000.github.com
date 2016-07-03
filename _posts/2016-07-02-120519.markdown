@@ -52,7 +52,13 @@ $$
  \end{eqnarray*}
 $$
 
-where $$sgn(\cdot)$$ is the sign function.
+where $$sgn(\cdot)$$ is the sign function. 
+
+Figure 1 illustrates the above estimators according to varying $$\bar y$$.
+
+![look at me](figure/1.png){#sealA width=50%}
+Caption : 
+
 
 
 
