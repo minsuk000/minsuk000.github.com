@@ -42,8 +42,8 @@ $$
  \bar y,\:\:\mbox{ if $|\bar y|\geq (\lambda/n)^{1/2} $}
  \end{cases}
  \\
-   \widehat \theta_{L_1} &=&  \begin{cases} 0,\:\:\mbox{ if $|\bar y|< (\lambda/n)^{1/2} $}\\
- \bar y - sign(\bar y),\:\:\mbox{ if $|\bar y|\geq (\lambda/n)^{1/2} $}
+   \widehat \theta_{L_1} &=&  \begin{cases} 0,\:\:\mbox{ if $|\bar y|< \lambda/n $}\\
+ \bar y - sign(\bar y),\:\:\mbox{ if $|\bar y|\geq \lambda/n $}
  \end{cases}
  \\
  \widehat \theta_{L_2} &=& \frac{n}{n+\lambda}\bar y,
