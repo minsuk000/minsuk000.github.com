@@ -34,7 +34,7 @@ $$
  \end{eqnarray*}
 $$
   
-The resulting estimators have explicit forms as 
+The resulting estimators have the explicit forms as 
 
 $$
  \begin{eqnarray*}
@@ -59,6 +59,7 @@ To help the understainding, I attached Figure 1 that illustrates the above estim
 ##### Figure 1: the sample mean $$\bar y$$ versus the penalized estimators $$\widehat \theta$$: $$L_0$$ penalized estimator (left), $$L_1$$ penalized estimator (middle), and $$L_2$$ penalized estimator (right).
 
 ![look at me](/assets/penalty2.pdf)
+
 
 
 
