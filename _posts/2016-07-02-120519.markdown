@@ -60,7 +60,7 @@ To help the understainding, I attached Figure 1 that illustrates the above estim
 
 ![look at me](/assets/penalty2.pdf)
 
-
+ It is clear that the $$L_2$$ penalized estimators is not a sparse estimator, which could result in an exactly zero estimated value, since regardless of $$\abr y$$ the estimator $$\theta_{L_2}$$ is always non-zero.
 
 
 
