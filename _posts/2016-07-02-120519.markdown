@@ -56,11 +56,9 @@ where $$sgn(\cdot)$$ is the sign function.
 
 Figure 1 illustrates the above estimators according to varying $$\bar y$$.
 
-#### Figure 1: {#figure1}
+#### Figure 1: the sample mean $$\bar y$$ versus the penalized estimators $$\widehat \theta$$: $$L_0$$ penalized estimator (left), $$L_1$$ penalized estimator (middle), and $$L_2$$ penalized estimator (right).{#figure1}
 
 ![look at me](/assets/penalty2.pdf)
-
-Caption : 12po3ika
 
 
 
