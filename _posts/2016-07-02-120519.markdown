@@ -34,7 +34,7 @@ $$
  \end{eqnarray*}
 $$
   
-The resulting estimators have closed forms as 
+The resulting estimators have explicit forms as 
 
 $$
  \begin{eqnarray*}
