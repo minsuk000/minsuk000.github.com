@@ -60,7 +60,7 @@ To help the understainding, I attached Figure 1 that illustrates the above estim
 
 ![look at me](/assets/penalty2.pdf)
 
- It is clear that the $$L_2$$ penalized estimator (right) is not a sparse estimator, which could result in an exactly zero estimated value, since regardless of $$\bar y$$ the estimator $$\theta_{L_2}$$ is always non-zero. The $$L_0$$ penalized estimator is called a **hard-thresholding** estimator, since the estimated value keeps the $
+ It is clear that the $$L_2$$ penalized estimator (right) is not a sparse estimator, which could result in an exactly zero estimated value, since  the estimator $$\theta_{L_2}$$ is always non-zero unless the $$\bar y$$ is exactly zero, which is only possible on a set of probability zero in this setting. The $$L_0$$ penalized estimator is called a **hard-thresholding** estimator, since the estimated value keeps the $
  $\bar y$$, if the $$\vert\bar y\vert$$ is larger than a specificc threshold $$\lambda/n$$, and it becomes exactly zero, otherwise. 
  
  
