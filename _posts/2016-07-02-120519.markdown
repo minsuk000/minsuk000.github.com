@@ -56,7 +56,7 @@ where $$sgn(\cdot)$$ is the sign function.
 
 Figure 1 illustrates the above estimators according to varying $$\bar y$$.
 
-![look at me](1.png)
+![look at me](/_posts/figure/penlaty2.pdf)
 
 Caption : slkjelfjiaaa
 
