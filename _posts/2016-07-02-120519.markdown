@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Penalized Likelihood Estimators and Shrinkage Priors: LASSO and Bayesian LASSO"
+title: "Penalized Likelihood Estimators and Shrinkage Priors: $$L_0$$, $$L_1$$, $$L_2$$ Penalties"
 comments: true
 ---
 
@@ -68,10 +68,16 @@ To help the understainding, I attached Figure 1 that illustrates the above estim
  
  My answer is that the $$L_0$$ is better, if it's computationally possible.   
   
- The $$L_0$$ penalized estimator enjoys some desirable properties such as the oracle properties: [Yongdai Kim](http://oldstat.snu.ac.kr/ydkim/)'s great explanation of this concept is in [this slides](https://www.birs.ca/workshops/2011/11w5051/files/12_yongdai_kim_on_weak_and_strong_oracle_property.pdf), while the $$L_1$$ estimator fails to achieve this in linear model settings, since the $$L_1$$ penalized estimator is baised. However, when we consider a large number of  parameters, sometimes larger than the sample size, it is computationally very demanding to find the solution of the $$L_0$$ penalized objective function; it is so-called a NP-hard problem. On the other hand, the $$L_1$$ penalty function $$\vert\theta\vert$$ is convex for multi-dimensional $$\theta \in \mathbb{R}^d$$ for some large positive integer $$d$$, the resulting optimization is also convex when the $$-2\times \log L(y\mid \theta)$$ is convex. Convex optimizations not only quarantee to search the global minimizer, but also there are a rich amount of reliable optimization algorithms to attack this problem, for example [the coordinate descent algorithms](https://arxiv.org/pdf/0803.3876.pdf), [the ADMM](http://arxiv.org/pdf/1208.3922v3.pdf), [the proximal algorithms](https://web.stanford.edu/~boyd/papers/pdf/prox_algs.pdf), and etc. For linear regression models with $$L_1$$ penalty, [the Least Angle RegreSsion (LARS)](https://web.stanford.edu/~hastie/Papers/LARS/LeastAngle_2002.pdf) algorithm provides a very fast and scalable computation. I will discuss the details in following posts.    
+ By choosing appropriate rate of $$\lambda$$, the $$L_0$$ penalized estimator enjoys some desirable properties such as the oracle properties: [Yongdai Kim](http://oldstat.snu.ac.kr/ydkim/)'s great explanation of this concept is in [this slides](https://www.birs.ca/workshops/2011/11w5051/files/12_yongdai_kim_on_weak_and_strong_oracle_property.pdf), while the $$L_1$$ estimator fails to achieve this in linear model settings, since the $$L_1$$ penalized estimator is baised. However, when we consider a large number of  parameters, sometimes larger than the sample size, it is computationally very demanding to find the solution of the $$L_0$$ penalized objective function; it is so-called a NP-hard problem. On the other hand, the $$L_1$$ penalty function $$\vert\theta\vert$$ is convex for multi-dimensional $$\theta \in \mathbb{R}^d$$ for some large positive integer $$d$$, the resulting optimization is also convex when the $$-2\times \log L(y\mid \theta)$$ is convex. Convex optimizations not only guarantee the global minimizer, but also there are a rich amount of reliable optimization algorithms to attack this problem, for example [the coordinate descent algorithms](https://arxiv.org/pdf/0803.3876.pdf), [the ADMM](http://arxiv.org/pdf/1208.3922v3.pdf), [the proximal algorithms](https://web.stanford.edu/~boyd/papers/pdf/prox_algs.pdf), and etc. For linear regression models with $$L_1$$ penalty (so-called LASSO), [the Least Angle RegreSsion (LARS)](https://web.stanford.edu/~hastie/Papers/LARS/LeastAngle_2002.pdf) algorithm provides a very fast and scalable computation. I will discuss the details in following posts.    
  
  
-#### $$L_2$$ penalties are still important in many cases.
+#### $$L_2$$ penalties are still important in many cases. 
+
+During the late 1950s,  statisticians got shocked by the introduction of a estimator called [James-Stein (JS) estimator](https://en.m.wikipedia.org/wiki/James–Stein_estimator). The reason was that under mild conditions the risk of the JS estimator is uniformly lower than that of the MLE in Gaussian sequence models, and it turned out that the JS estimator is a kind of $$L_2$$ penalized likelihood estimator. This is demonstrated again in [Efron and Morris (1973)](http://faculty.chicagobooth.edu/nicholas.polson/teaching/41900/efron-morris2.pdf), and in [Efron and Morris (1977)](http://statweb.stanford.edu/~ckirby/brad/other/Article1977.pdf) it is interpreted as an empirical Bayes estimator with a legendary example about bases batting rates.
+
+#### Conclusion
+
+ I briefly talked about some penalized estimator, and simple discussion about pros and cons on the penalties. In the follwing post, I will discuss some properties of sparse estimators, so-called **SUPER-EFFICIENCY**.  
 
 
  
