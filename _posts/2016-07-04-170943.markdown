@@ -10,8 +10,19 @@ Recently, one of my friends asked me a question about the previous post "[How to
 
 He asked me why the use of priors with Gaussian tails hurt the optimal rate of its posterior contraction rate. A density with a Gaussian tail refers to a density function that decays a square-exponential rate, i.e., $$-\log\pi(\theta)= O(\theta^2)$$. 
 
-The basic idea is the following. Consider a simple model where $$y_i\mid \theta \overset{i.i.d.}{\to}N(\theta,1)$$ for $$i=1,\dots,n$$. 
+The basic idea is the following. Consider a simple model where $$y_i\mid \theta \overset{i.i.d.}{\sim}N(\theta,1)$$ for $$i=1,\dots,n$$. The naive choice of the prior can be $$\theta \sim N(0,\tau^2)$$. The resulting posterior mean is 
 
+$$
+E(\theta\mid y) = \frac{n}{n+\tau^2}\bar y,
+$$ 
+
+where $$\bar y$$ is the sample mean. The $$L_2$$ risk can be expressed as
+
+$$
+E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] = E_{\theta_0}[(\theta_0-\bar y)^2] + E_{\theta_0}[\{\bar y-E(\theta\mid y)\}^2] = \frac{1}{n} + \frac{1}{n(n+\tau^2)}+\frac{\theta_0^2}{n+\tau^2}, 
+$$
+
+where 
 
 
 
