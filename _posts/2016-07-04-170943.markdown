@@ -19,7 +19,11 @@ $$
 where $$\bar y$$ is the sample mean. The $$L_2$$ risk can be expressed as
 
 $$
-E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] = E_{\theta_0}[(\theta_0-\bar y)^2] + E_{\theta_0}[\{\bar y-E(\theta\mid y)\}^2] = \frac{1}{n} + \frac{1}{n(n+\tau^2)}+\frac{\theta_0^2}{n+\tau^2}, 
+\begin{eqnarray*}
+&&E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] \\
+&=& E_{\theta_0}[(\theta_0-\bar y)^2] + E_{\theta_0}[\{\bar y-E(\theta\mid y)\}^2]\\
+&=& \frac{1}{n} + \frac{1}{n(n+\tau^2)}+\frac{\theta_0^2}{n+\tau^2}, 
+\end{eqnarray*}
 $$
 
 where 
