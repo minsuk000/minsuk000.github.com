@@ -12,3 +12,4 @@ He asked me why priors with Gaussian tail that decays square-exponential rate, i
 
 
 
+
