@@ -9,8 +9,6 @@ Recently, one of my friends asked me a question about the previous post "[How to
 >Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections.
 
 
-$$-\log\pi(\theta)= O(\theta^2)$$. 
-
 
 
 
