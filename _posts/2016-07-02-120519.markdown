@@ -73,7 +73,7 @@ To help the understainding, I attached Figure 1 that illustrates the above estim
  
 #### $$L_2$$ penalties are still important in many cases. 
 
-During the late 1950s,  statisticians got shocked by the introduction of an estimator called [James-Stein (JS) estimator](https://en.m.wikipedia.org/wiki/James–Stein_estimator). The reason was that under mild conditions the risk of the JS estimator is uniformly lower than that of the MLE in Gaussian sequence models, and it turned out that the JS estimator is a kind of $$L_2$$ penalized likelihood estimator. This is demonstrated again in [Efron and Morris (1973)](http://faculty.chicagobooth.edu/nicholas.polson/teaching/41900/efron-morris2.pdf), and in [Efron and Morris (1977)](http://statweb.stanford.edu/~ckirby/brad/other/Article1977.pdf) it is interpreted as an empirical Bayes estimator with a legendary example about bases batting rates.
+During the late 1950s,  statisticians got shocked by the introduction of an estimator called [James-Stein (JS) estimator](https://en.m.wikipedia.org/wiki/James–Stein_estimator). The reason was that under mild conditions the risk of the JS estimator is uniformly lower than that of the MLE in Gaussian sequence models, and it turned out that the JS estimator is a kind of $$L_2$$ penalized likelihood estimator. This is demonstrated again in [Efron and Morris (1973)](http://faculty.chicagobooth.edu/nicholas.polson/teaching/41900/efron-morris2.pdf) and  [Efron and Morris (1977)](http://statweb.stanford.edu/~ckirby/brad/other/Article1977.pdf), and  laksjdit is interpreted as an empirical Bayes estimator with a legendary example about bases batting rates.
 
 #### Conclusion
 
