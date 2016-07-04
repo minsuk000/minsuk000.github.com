@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Optimality Of Posterior Contraction Rate And Priors"
+comments: true
+---
+
+Recently one of my friends asked me a question about the previous post "How to prove the  Bayesian Model Selection Consistency in Linear Models for High-dimensional Settings". He was wondering the following statement in the post.
+
+Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections.
+
+He asked me why priors with Gaussian tail that decays square-exponential rate, i.e., $$-\log\pi(\theta)= O(\theta^2)$$. 
+
+
+
+
+
