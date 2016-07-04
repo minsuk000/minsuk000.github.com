@@ -65,7 +65,7 @@ To help the understanding, I attached Figure 1 that illustrates the above estima
  
 #### Which one is better? $$L_0$$, $$L_1$$, or $$L_2$$ ?
 
- In the previous section, I mentioned that the $$L_0$$ and $$L_1$$ penalized estimators are sparse estimators, but the $$L_2$$ penalized estimator is not. The sparsity is useful when we have to consider model selection problems, since in many settings a sparsity pattern of the parameters determines a model, for example in linear regression models the zero regression parameters indicates that the corresponding independent variables are irrelavant to the response in the regression model. Then, next natural question is "**Which one is better among the $$L_0$$ and $$L_1$$ penalized estimators?**" 
+ In the previous section, I mentioned that the $$L_0$$ and $$L_1$$ penalized estimators are sparse estimators, but the $$L_2$$ penalized estimator is not. The sparsity is useful when we have to consider model selection problems, since in many settings a sparsity pattern of the parameters determines a model, for example in linear regression models the zero regression parameters indicate that the corresponding independent variables are irrelavant to the response in the regression model. Then, next natural question is "**Which one is better among the $$L_0$$ and $$L_1$$ penalized estimators?**" 
  
  My answer is that the $$L_0$$ is better than the $$L_1$$, if it's computationally possible.   
   
