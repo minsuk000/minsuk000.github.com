@@ -8,7 +8,9 @@ Recently, one of my friends asked me a question about the previous post "[How to
 
 >Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections.
 
-He asked me why the use of priors with Gaussian tails hurt the optimal posterior contraction rate. A density with a Gaussian tail refers to a density function that decays a square-exponential rate, i.e., $$-\log\pi(\theta)= O(\theta^2)$$. 
+He asked me why the use of priors with Gaussian tails hurt the optimal posterior contraction rate. A density with a Gaussian tail refers to a density function that decays a square-exponential rate, i.e., 
+
+$$-\log\pi(\theta)= O(\theta^2)$$. 
 
 
 
