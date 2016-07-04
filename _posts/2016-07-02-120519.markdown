@@ -78,7 +78,7 @@ During the late 1950s,  statisticians got shocked by the introduction of an esti
 
 #### Conclusion
 
- I briefly talked about some penalized estimator, and simple discussion about pros and cons on the penalties. In the follwing post, I will discuss some interesting property of sparse estimators, which is called **super-efficiency**.  
+ I briefly talked about some penalized estimator, and simple discussion about pros and cons on the penalties. In the follwing post, I will discuss an interesting property of sparse estimators, which is called **super-efficiency**.  
 
 
  
