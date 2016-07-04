@@ -12,7 +12,7 @@ $$
  y = X_{\bf k}\beta_{\bf k} + \epsilon,
  $$
  
- where $$\epsilon \sim N(0,\sigma^2I_n)$$.  We assume that only a fixed number of parameters  are non-zero, and note the size by $$s_0$$. Also, let the set of indices of the true non-zero parameters denoted by $${\bf  t}$$. For simplicity, the prior of parameters is a discrete mixture of a Gaussian with a zero mean and a variance $$\tau^2$$; i.e., $$\beta_{{\bf k},j}\mid {\bf k}\sim N(0,\sigma^2\tau^2)$$ for $$j=1,\dots,\vert{\bf  k}\vert$$. Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections. The resulting posterior probability of each model  is 
+ where $$\epsilon \sim N(0,\sigma^2I_n)$$.  We assume that only a fixed number of parameters  are non-zero, and note the size by $$s_0$$. Also, let the set of indices of the true non-zero parameters denoted by $${\bf  t}$$. For simplicity, the prior of parameters is a discrete mixture of a Gaussian with a zero mean and a variance $$\tau^2$$; i.e., $$\beta_{\bf k}\mid {\bf k}\sim N(0,\sigma^2\tau^2\mr{I}_{\vert{\bf k}\vert})$$. Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections. The resulting posterior probability of each model  is 
 
 $$
 \pi({\bf k}\mid y) = \frac{m_{\bf k}(y)\pi({\bf k})}{\sum_{\bf l}m_{\bf l}(y)\pi({\bf l})}, 
