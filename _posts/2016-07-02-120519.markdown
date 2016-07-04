@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Penalized Likelihood Estimators and Shrinkage Priors: $$L_0$$, $$L_1$$, $$L_2$$ Penalties"
+
 comments: true
 ---
 
