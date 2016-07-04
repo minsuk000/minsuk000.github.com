@@ -4,7 +4,7 @@ title: "The Optimality Of Posterior Contraction Rate and Priors"
 comments: true
 ---
 
-Recently one of my friends asked me a question about the previous post "How to prove the  Bayesian Model Selection Consistency in Linear Models for High-dimensional Settings". He was wondering the following statement in the post.
+Recently one of my friends asked me a question about the previous post "[How to prove the  Bayesian Model Selection Consistency in Linear Models for High-dimensional Settings]({% post_url 2016-06-14-213921%})". He was wondering the following statement in the post.
 
 >Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections.
 
