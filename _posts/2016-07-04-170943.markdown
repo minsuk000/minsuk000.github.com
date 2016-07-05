@@ -8,7 +8,7 @@ Recently, one of my friends asked me a question about the previous post "[How to
 
 >Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections.
 
-He asked me why the use of priors with Gaussian tails hurt the optimal rate of its posterior contraction rate. A density with a Gaussian tail refers to a density function that decays a square-exponential rate, i.e., $$-\log\pi(\theta) \asymp \theta^2$$. 
+He asked me why the use of priors with Gaussian tails hurts the optimal rate of its posterior contraction rate. A density with a Gaussian tail refers to a density function that decays a square-exponential rate, i.e., $$-\log\pi(\theta) \asymp \theta^2$$. 
 
 The basic idea is the following. Consider a simple model where $$y_i\mid \theta \overset{i.i.d.}{\sim}N(\theta,1)$$ for $$i=1,\dots,n$$. The naive choice of the prior can be $$\theta \sim N(0,\tau^2)$$. The resulting posterior mean is 
 
@@ -21,7 +21,7 @@ where $$\bar y$$ is the sample mean. The $$L_2$$ risk can be expressed as
 $$
 \begin{eqnarray*}
 E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] &=& E_{\theta_0}[(\theta_0-\bar y)^2] + E_{\theta_0}[\{\bar y-E(\theta\mid y)\}^2]\\
-&=& \frac{1}{n} + \frac{1}{n(n+\tau^2)^2}+\frac{\theta_0^2}{(n+\tau^2)^2}, 
+&=& \frac{1}{n} + \frac{\tau^4}{n(n+\tau^2)^2}+\frac{\tau^4\theta_0^2}{(n+\tau^2)^2}, 
 \end{eqnarray*}
 $$
 
@@ -29,7 +29,7 @@ where $$\theta_0$$ is the true parameter that involves in the data-generating pr
 
 $$
 \begin{eqnarray*}
-\sup_{\theta_0} E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] &=& \frac{1}{n} + \frac{1}{n(n+\tau^2)^2}+\sup_{\theta_0}\left(\frac{\theta_0^2}{(n+\tau^2)^2} \right)\\
+\sup_{\theta_0} E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] &=& \frac{1}{n} + \frac{\tau^4}{n(n+\tau^2)^2}+\sup_{\theta_0}\left(\frac{\tau^4\theta_0^2}{(n+\tau^2)^2} \right)\\
 &=& \infty.
 \end{eqnarray*}
 $$
