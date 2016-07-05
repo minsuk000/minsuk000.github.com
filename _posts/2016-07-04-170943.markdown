@@ -8,7 +8,7 @@ Recently, one of my friends asked me a question about the previous post "[How to
 
 >Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections.
 
-He asked me why the use of priors with Gaussian tails hurt the optimal rate of its posterior contraction rate. A density with a Gaussian tail refers to a density function that decays a square-exponential rate, i.e., $$-\log\pi(\theta)= O(\theta^2)$$. 
+He asked me why the use of priors with Gaussian tails hurt the optimal rate of its posterior contraction rate. A density with a Gaussian tail refers to a density function that decays a square-exponential rate, i.e., $$-\log\pi(\theta) \asymp \theta^2$$. 
 
 The basic idea is the following. Consider a simple model where $$y_i\mid \theta \overset{i.i.d.}{\sim}N(\theta,1)$$ for $$i=1,\dots,n$$. The naive choice of the prior can be $$\theta \sim N(0,\tau^2)$$. The resulting posterior mean is 
 
@@ -36,7 +36,7 @@ $$
 
 The supremum of the $$L_2$$ risk is infinity, and the resulting minimax rate of the posterior contraction  fails to achieve the optimal rate. This result also can be applied to more general settings. That's why I mentioned in [the previous post]({% post_url 2016-06-14-213921%}) that Gaussian tails could hurt the minimax rate of the posterior contraction.
 
-On the other hand, when we consider priors that have tails at least as heavy as exponential distributions, i.e., $$-\log\pi(\theta)= O(\vert\theta\vert)$$, one can show that the resulting posterior mean satisfies the following:
+On the other hand, when we consider priors that have tails at least as heavy as exponential distributions, i.e., $$-\log\pi(\theta)\asymp \vert\theta\vert$$, one can show that the resulting posterior mean satisfies the following:
 
 $$
 \sup_{\theta_0} E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] \leq C,
