@@ -42,7 +42,7 @@ $$
 \sup_{\theta_0} E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] \leq C,
 $$ 
  
-for some positive constant $$C$$. This is a key ingredient to prove the optimal minimax rate of posterior contraction. If you're interested in details, please see [Castillo and van der Vaart (2011)](https://projecteuclid.org/euclid.aos/1351602537). This paper is about high-dimensional sparse settings, but it also well-describes the idea of posterior contractions.   
+for some positive constant $$C$$. This is a key ingredient to prove the optimal minimax rate of posterior contraction and why Gaussian tailed priors fail to achieve the optimal minmax rate. The optimal rate can be attained by at leat exponential tailed priors. If you're interested in details, please see [Castillo and van der Vaart (2011)](https://projecteuclid.org/euclid.aos/1351602537). This paper is about high-dimensional sparse settings, but it also well-describes the idea of posterior contractions.   
 
 
 
