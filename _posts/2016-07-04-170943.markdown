@@ -36,7 +36,7 @@ $$
 
 The supremum of the $$L_2$$ risk is infinity, and the resulting minimax rate of the posterior contraction  fails to achieve the optimal rate. This result also can be applied to more general settings. That's why I mentioned in [the previous post]({% post_url 2016-06-14-213921%}) that Gaussian tails could hurt the minimax rate of the posterior contraction.
 
-On the other hand, when we consider priors that have tails at least as heavy as exponential distributions, i.e., $$-\log\pi(\theta)\asymp \vert\theta\vert$$, one can show that the resulting posterior mean satisfies the following:
+On the other hand, when we consider priors that have tails at least as heavy as exponential distributions, i.e., $$-\log\pi(\theta)= O( \vert\theta\vert)$$, one can show that the resulting posterior mean satisfies the following:
 
 $$
 \sup_{\theta_0} E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] \leq C,
