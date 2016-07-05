@@ -6,9 +6,9 @@ comments: true
 ---
 
 
-In the previous posts, I explained some fundamental concepts about model selection, and now I am going to talk about Bayesian model selection.  
+In previous posts, I explained some fundamental concepts about model selection procedures. Now I am going to talk about Bayesian model selection.  
 
-The beauty of Bayesian statistIcs is a coherence.  All methodologies can be explained by one single theorem: Bayes theorem.  This also can be applied to model selection or hypothesis testing problems .  Let me first start with a simple example. Consider that the data $$y_i$$ follows i.i.d $$N(0,1)$$ for $$i=1,\dots,n$$, and suppose that we are interested in whether the parameter $$\theta$$ is zero or not. The natural hypothesis statement is
+The beauty of Bayesian statistIcs is coherence.  All methodologies can be explained by one single theorem: Bayes theorem.  This also can be applied to model selection or hypothesis testing problems .  Let me first start with a simple example. Consider that the data $$y_i$$ follows i.i.d $$N(0,1)$$ for $$i=1,\dots,n$$, and suppose that we are interested in whether the parameter $$\theta$$ is zero or not. The natural hypothesis statement is
 
 $$
 M_0: \: \theta = 0 \:\:vs\:\:M_1: \: \theta \neq 0  
@@ -18,7 +18,7 @@ The reason why I used $$M_0$$ and $$M_1$$, instead of more common notations $$H_
 
 ##### How can we compare two models $$M_0$$ and $$M_1$$? 
 
-As usually Bayesian methods do, the Bayes theorem can be applied to the model selection problem. Suppose that we consider a Gaussian prior $$N(0,1)$$ on the parameter $$\theta$$ under $$M_1$$. Then, the posterior probability of each model can be expressed as
+As usual Bayesian methods go, the Bayes theorem can be applied to the model selection problem. Suppose that we consider a Gaussian prior $$N(0,1)$$ on the parameter $$\theta$$ under $$M_1$$. Then, the posterior probability of each model can be expressed as
 
 $$\begin{eqnarray*}
 \pi(M_0\mid y) &\propto& p(y\mid \theta = 0)\pi(M_0)\\
@@ -47,6 +47,6 @@ where $$\widetilde y = \sum_{i=1}^n y_i/(n+1/\tau^2)$$. Note that the smaller $$
 
 Since $$(n+1/\tau^2)\widetilde y^2/(2\sigma^2)=O_p(1)$$, when the data is generated from $$M_0$$, the evidence in favor of $$M_0$$ ($$1/BF_{10}(y)$$) is determined by i) the value of $$\tau^2$$, and ii) the model prior ratio $$\frac{\pi(M_1)}{\pi(M_0)}$$. Surprisingly, as $$\tau^2$$ increases, the resulting evidence more prefers $$M_0$$, because of the $$\tau^{-1}$$ term. When $$\tau^2$$ is very large, the prior would have sparse density around the null value $$0$$, which results in a nonlocal-like prior ([Johson and Rossel, 2010](https://www.stat.tamu.edu/~vjohnson/files/JRSSB.72.2.2010.143-170.pdf)). Actually, that is the reason why nonlocal priors provide a model selection that has a stronger sparsity compared to that from local priors.  
 
-Under Gaussian sequence models or linear regression models, there has been deep investigations in theories regarding model selection problems such as [Castillo and van der vaart. (2012)](https://projecteuclid.org/euclid.aos/1351602537) and  [Bontemps (2011)](https://arxiv.org/pdf/1009.1370.pdf) in situations where the number of parameter increases as the sample size increases. Even though the parameter is multiple in high-dimensional situations, the Bayesian model selection procedure is similar with the above example. The key is to control multiplicity problems, and it can be handled by  i) priors on the parameters, ii) model priors, or iii) both.  
+Under Gaussian sequence models or linear regression models, there have been deep investigations in theories regarding model selection problems, such as [Castillo and van der vaart. (2012)](https://projecteuclid.org/euclid.aos/1351602537) and  [Bontemps (2011)](https://arxiv.org/pdf/1009.1370.pdf) in situations where the number of parameter increases as the sample size increases. Even though the parameters are multiple in high-dimensional situations, the Bayesian model selection procedure is similar with the above example. The key is to control multiplicity problems, and it can be handled by  i) priors on the parameters, ii) model priors, or iii) both.  
 
-Some people might be curious about the fact that the very flat Gaussian prior with large $$\tau^2$$ results in a strong evidence in favor of sparsity  regarding $$\theta$$, as the shape of the prior is exactly opposite of that of the [Baysian lasso](http://www.stat.ufl.edu/~casella/Papers/Lasso.pdf). One remark is that Bayesian lasso is not for Bayesian hypothesis tests or model selections, but for an estimation perspective. Strong shrinkage effects of the Bayesian lasso result from more spiky shape at the null value, but the Bayesian lasso prior (double-exponential priors) does not results in a strong evidence in favor of sparsity when it is used for Bayesian hypothesis tests or model selections. Sounds controversial, huh?
+Some people might be curious about the fact that the very flat Gaussian prior with large $$\tau^2$$ results in a strong evidence in favor of sparsity  regarding $$\theta$$, as the shape of the prior is exactly opposite of that of the [Baysian lasso](http://www.stat.ufl.edu/~casella/Papers/Lasso.pdf). One remark is that the Bayesian lasso is not for Bayesian hypothesis tests or model selections, but for an estimation perspective. Strong shrinkage effects of the Bayesian lasso result from more spiky shape at the null value, but the Bayesian lasso prior (double-exponential priors) does not results in strong evidence in favor of sparsity when it is used for Bayesian hypothesis tests or model selections. Sounds controversial, huh?
