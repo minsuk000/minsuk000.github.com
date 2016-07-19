@@ -4,7 +4,7 @@ title: "The Optimality Of Posterior Contraction Rate and Priors"
 comments: true
 ---
 
-Recently, one of my friends asked me a question about the previous post "[How to prove the  Bayesian Model Selection Consistency in Linear Models for High-dimensional Settings]({% post_url 2016-06-14-213921%})". He was wondering the following statement in the post.
+Recently, one of my friends asked me a question about the previous post "[How to prove the  Bayesian Model Selection Consistency in Linear Models for High-dimensional Settings]({% post_url 2016-06-14-213921%})". He was wondering about the following statement in the post.
 
 >Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections.
 
@@ -25,7 +25,7 @@ E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] &=& E_{\theta_0}[(\theta_0-\bar y
 \end{eqnarray*}
 $$
 
-where $$\theta_0$$ is the true parameter that involves in the data-generating process and $$E_{\theta_0}(\cdot)$$ refers to the expectation operator corresponding to $$\theta_0$$. Therefore, the resulting supremum of the risk with respect to $$\theta_0$$ is 
+where $$\theta_0$$ is the true parameter that is involved in the data-generating process and $$E_{\theta_0}(\cdot)$$ refers to the expectation operator corresponding to $$\theta_0$$. Therefore, the resulting supremum of the risk with respect to $$\theta_0$$ is 
 
 $$
 \begin{eqnarray*}
