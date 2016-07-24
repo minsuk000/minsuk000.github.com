@@ -12,7 +12,7 @@ $$
  y = X_{\bf k}\beta_{\bf k} + \epsilon,
  $$
  
- where $$\epsilon \sim N(0,\sigma^2I_n)$$.  We assume that only a fixed number of parameters  are non-zero, and note the size by $$s_0$$. Also, let the set of indices of the true non-zero parameters denoted by $${\bf  t}$$. For simplicity, the prior of parameters is a discrete mixture of a Gaussian with a zero mean and a variance $$\tau^2$$; i.e., $$\beta_{\bf k}\mid {\bf k}\sim N(0,\sigma^2\tau^2 I_{\vert{\bf k}\vert})$$. Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections. The resulting posterior probability of each model  is 
+ where $$\epsilon \sim N(0,\sigma^2I_n)$$ and $$X_{\bf k}$$ refers to a submatrix of $X$ containing the variables in the model ${\bf k}$.  We assume that only a fixed number of parameters  are non-zero, and note the size by $$s_0$$. Also, let the set of indices of the true non-zero parameters denoted by $${\bf  t}$$. For simplicity, the prior of parameters is a discrete mixture of a Gaussian with a zero mean and a variance $$\tau^2$$; i.e., $$\beta_{\bf k}\mid {\bf k}\sim N(0,\sigma^2\tau^2 I_{\vert{\bf k}\vert})$$. Even though Gaussian tails hurt the optimal minimax rate of posterior contraction, it is ok when we only consider model selections. The resulting posterior probability of each model  is 
 
 $$
 \pi({\bf k}\mid y) = \frac{m_{\bf k}(y)\pi({\bf k})}{\sum_{\bf l}m_{\bf l}(y)\pi({\bf l})}, 
@@ -48,7 +48,7 @@ Then, it is sufficient to show that i) $$\sum_{ {\bf k} : {\bf  t} \subsetneq {\
 
 
 $$\begin{eqnarray*}
-&&P\left[ \sum_{ {\bf k}:{\bf t} \subset {\bf k} }\frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})} >\epsilon \mid y \right]\\
+&&P\left[ \sum_{ {\bf k}:{\bf t} \subsetneq {\bf k} }\frac{m_{\bf k}(y)\pi({\bf k})}{m_{\bf t}(y)\pi({\bf t})} >\epsilon \mid y \right]\\
 &\approx& P\left[ \sum_{ {\bf k} : {\bf t} \subsetneq {\bf k} }p^{-\lambda(|{\bf k}| -|{\bf t}| )}\tau^{-(|{\bf k}| -|{\bf t}| )}\left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2}\exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \} >\epsilon \mid y \right]\\
 &=&  P\left[ \sum_{d=1}^{ p-| {\bf t} | } \sum_{ {\bf k} : {\bf t} \subsetneq {\bf k} \& | {\bf t} \setminus {\bf k} | = d } p^{-\lambda d}\tau^{-d}\left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \} >\epsilon \mid y \right]\\
  &\leq& \sum_{ d=1 }^{ p-| {\bf t} | } P\left[  \sum_{ {\bf k} : {\bf t} \subsetneq{\bf k} \& | {\bf k} \setminus {\bf t} | = d } p^{-\lambda d}\tau^{-d} \left\{\frac{X_{\bf k}^TX_{\bf k}+1/\tau^2I}{X_{\bf t}^TX_{\bf t}+1/\tau^2I}\right\}^{-1/2} \exp\{y^T(P_{\bf k}-P_{\bf t})y/(2\sigma^2) \}  > \epsilon/(p-|{\bf t}|) \mid y \right], 
