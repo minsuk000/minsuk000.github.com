@@ -17,7 +17,7 @@ $$
 \sup_{\theta_0} E_{\theta_0}[\{\theta_0 - E(\theta\mid y)\}^2] = \infty
 $$
 
-Instead, we can consider an empirical prior such as $$\theta \sim N(\bar y, \tau^2)$$, where $$\bar y$$ is the sample mean. This is not rigorous full Bayes prior, because the prior depends on the data. Then, the resulting risk is
+Instead, we can consider an empirical prior such as $$\theta \sim N(\bar y, \tau^2)$$, where $$\bar y$$ is the sample mean. This is not full Bayes prior, because the prior depends on the data. Then, the resulting risk is
 
 $$
 \begin{eqnarray*}
