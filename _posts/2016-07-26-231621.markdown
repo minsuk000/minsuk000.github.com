@@ -31,5 +31,5 @@ $$
 y_i\mid\theta_i \sim N(\theta_i,\sigma^2),
 \end{eqnarray*}
 $$ 
-for $$i=1,\dots,n$$. Then, the prior that they consider is $$\theta\sim N(y_i,\sigma^2\tau^2)$$ for $$i\in {\bf k}$$ for some model $${\bf k}$$; $$\theta_i = 0$$ for $$i\not\in {\bf k}$$. Because the prior mean is the data itself, it could avoid *over-shrinkage* effects. I really like this idea.
+for $$i=1,\dots,n$$. Then, the prior that they consider is $$\theta\sim N(y_i,\sigma^2\tau^2)$$ for $$i\in {\bf k}$$ for some model $${\bf k}$$; $$\theta_i = 0$$ for $$i\not\in {\bf k}$$. Because the prior mean is the data itself, it could avoid *over-shrinkage* effects. It is simple, but interesting.
 
