@@ -3,8 +3,8 @@ layout: post
 title: "Penalized likelihood Estimator and Shrinkage Priors (2): Hodge's Estimator and Super-efficiency"
 comments: true
 ---
-
-   Previously, I talked about sparse and shrinkage estimator based on penalized likelihood methods ( ["Penalized likelihood Estimator and Shrinkage Priors (1)"]({% post_url 2016-07-02-120519%}) ). Today I am going to discuss the legendary estimator so-called "Hodge's estimator" and its theoretical properties.
+ 
+ Previously, I talked about sparse and shrinkage estimator based on penalized likelihood methods (["Penalized likelihood Estimator and Shrinkage Priors (1)"]({% post_url 2016-07-02-120519%})). Today I am going to discuss the legendary estimator so-called "Hodge's estimator" and its theoretical properties.
 
 A legendary statistician R. A. Fisher naively believed that maximum likelihood estimators (MLE) would be the most efficient in a sense that the variance of the MLE is always less or equal to that of any estimator, at least in an asymptotic sense. However, Hodges' famous example of [super-efficiency](http://www.stat.yale.edu/~pollard/Books/LeCamFest/VanderVaart.pdf) not only broke down Fisher's naive belief, but also brought a huge shock to statistical society, since Hodge showed that the so-called Hodge's estimator achieves less asymptotic variance than that of MLE when the true parameter is exactly same with the specified test value, and it is as efficient as MLE otherwise.
 
@@ -14,6 +14,13 @@ $$
 y_i \sim N(\theta, 1),
 $$  
 
+where $$\theta$$is an unknown parameter for $$i = 1,\dots,n$$. It is well-known that the MLE is the sample  mean $$\bar y$$ and $$n^{1/2}(\bar y - \theta)$$ converges to $$N(0,1)$$ in distribution, as $$n$$ goes to infinity. Then, Hodge's estimator $$\widehat \theta^H_n$$ can be defined as a hard-thresholded estimator based on the MLE with the threshold $$n^{-1/4}$$; *i.e.*,
+
+$$
+\widehat \theta^H_n := \begin{cases}
+\bar y, \:\:\mbox{if}\:|\bar y|\geq n^{-1/4}\\
+0, \:\:\mbox{if}\:|\bar y|< n^{-1/4}
+\end{cases}
+$$ 
 
  
-
