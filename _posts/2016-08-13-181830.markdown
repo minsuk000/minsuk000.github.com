@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Penalized likelihood Estimator and Shrinkage Priors (2): Hodge's Estimator and Super-efficiency"	
-date: 2016-08-13 17:47
+title: "Penalized likelihood Estimator and Shrinkage Priors (2): Hodge's Estimator and Super-efficiency"
+comments: true
 ---
 
    Previously, I talked about sparse and shrinkage estimator based on penalized likelihood methods (["Penalized likelihood Estimator and Shrinkage Priors (1)"]({% post_url 2016-07-02-120519%})). Today I am going to discuss the legendary estimator so-called "Hodge's estimator" and its theoretical properties.
