@@ -14,8 +14,6 @@ $$
 y_i \sim N(\theta, 1),
 $$  
 
-where $$\theta$$is an unknown parameter for $$i = 1,\dots,n$$. It is well-known that the MLE is the sample  mean $$\bar y$$ and $$n^{1/2}(\bar y - \theta)$$ converges to $$N(0,1)$$ in distribution, as $$n$$ goes to infinity. Then, Hodge's estimator $$\widehat \theta^H_n$$ can be defined as a hard-thresholded estimator based on the MLE with the threshold $$n^{-1/4}$$; *i.e.*,
-
 
  
 
