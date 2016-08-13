@@ -19,8 +19,10 @@ where $$\theta$$is an unknown parameter for $$i = 1,\dots,n$$. It is well-known 
 $$
 \widehat \theta^H_n := \begin{cases}
 \bar y, \:\:\mbox{if}\:|\bar y|\geq n^{-1/4}\\
-0, \:\:\mbox{if}\:|\bar y|< n^{-1/4}
+0, \:\:\mbox{if}\:|\bar y|< n^{-1/4}.
 \end{cases}
 $$ 
+
+In the provided settings, Hodges' estimator is "super-efficient" in a sense that it is not only consistent in esitmation, but its asymptotic expected square error is also never worse than that of MLE; *i.e.*, under $$\theta\neq 0 $$ $$n^{1/2}(\widehat\theta^H_n-\theta)$$ converges to $$N(0,1)$$ in distribution, as $$n$$ tends to infinity, under $$\theta=0$$ n^{1/2}(\widehat\theta^H_n-\theta)$$ converges to a degenerate distribution of zero. In other words, it asymptotically outperforms MLE at $$\theta=0$$ and is not worse than MLE $$at \theta\neq 0$$. 
 
  
