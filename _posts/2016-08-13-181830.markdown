@@ -29,7 +29,7 @@ In the provided settings, Hodges' estimator is "super-efficient" in a sense that
 
   Although Hodges' estimator attains super-efficiency in some settings, [Le Cam (1953)](https://books.google.com/books/about/On_some_asymptotic_Properties_of_maximum.html?id=_SqVQwAACAAJ) showed that MLE is optimal among regular estimators, which means that the asymptotic behavior of the estimator is smooth with respect to the parameter $$\theta$$. He also showed that the set of parameter $$\theta$$ where Hodges' estimator is more efficient than the MLE must have Lebesgue measure zero. 
   
-  Moreover, [Leeb and Potscher (2008)](https://ideas.repec.org/p/cwl/cwldpp/1500.html) provided that any sparse estimator can have maximal risk diverging to infinity whenever the loss function is unbounded. In other words, sparse estimators compromise the risk near zero to take advantage of usefulness of sparsity. As the old proverb goes, *there is no free lunch*.
+  Moreover, [Leeb and Potscher (2008)](https://ideas.repec.org/p/cwl/cwldpp/1500.html) provided that any sparse estimator can have maximal risk diverging to infinity whenever the loss function is unbounded. In other words, sparse estimators compromise the risk near zero to take advantage of the usefulness of sparsity. As the proverb goes, *there is no free lunch*.
    
 
  
