@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Optimality Of Posterior Contraction Rate and Priors"
+title: "The Optimality of Posterior Contraction Rate and Priors (1)"
 comments: true
 ---
 
