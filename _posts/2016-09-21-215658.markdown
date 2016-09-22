@@ -20,7 +20,7 @@ As I discussed in the previous post ["How to prove the  Bayesian Model Selection
 $$
 \begin{eqnarray*}
 \pi({\bf k})&\propto& p^{-|{\bf k}|}(1-p^-1)^{p-|{\bf k}|}\\
-\pi(\beta_{\bf k}\mid {\bf k}) &\sim& N(0,\sigma^2g_n I_{|{\bf k}|).
+\pi(\beta_{\bf k}\mid {\bf k}) &\sim& N(0,\sigma^2 g_n I_{|{\bf k}|}).
 \end{eqnarray*}
 $$
 
