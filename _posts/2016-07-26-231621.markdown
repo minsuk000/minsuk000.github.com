@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "The Optimality Of Posterior Contraction Rate and Priors (2)"
+title: "The Optimality of Posterior Contraction Rate and Priors (2)"
 comments: true
 ---
 
-A few days ago, [Nurzhan Nurushev](http://www.math.vu.nl/en/about-the-department/people/phd-students/nurushevn.aspx) commented on my previous post ["The Optimality Of Posterior Contraction Rate and Priors"]({% post_url 2016-07-04-170943%}) at [J ISBA fabook group](https://www.facebook.com/groups/843187915745360/) as follows:
+A few days ago, [Nurzhan Nurushev](http://www.math.vu.nl/en/about-the-department/people/phd-students/nurushevn.aspx) commented on my previous post ["The Optimality of Posterior Contraction Rate and Priors (1)"]({% post_url 2016-07-04-170943%}) at [J ISBA fabook group](https://www.facebook.com/groups/843187915745360/) as follows:
 
 >Shin Minsuk , I think you are partly true. You missed the one case: if you consider gaussian prior(N(mu, sigma^2)) and use empirical Bayes approach wrt mu parameter, then you will avoid over-shrinkage problem. You can read this paper([http://arxiv.org/abs/1511.01803](http://arxiv.org/abs/1511.01803)). In particular, we obtained all consistency results for gaussian prior.
 What he is saying is that some empirical Gaussian priors on $$\theta$$ can resolve the issue of using Gaussian tailed priors in the minimax posterior contraction rate.
