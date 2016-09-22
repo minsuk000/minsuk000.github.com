@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Penalized likelihood Estimator and Shrinkage Priors (2): Hodge's Estimator and Super-efficiency"
+title: "Penalized Likelihood Estimator and Shrinkage Priors (2): Hodge's Estimator and Super-efficiency"
 comments: true
 ---
  
