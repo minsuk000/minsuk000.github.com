@@ -5,7 +5,7 @@ tags: Bayesian model selection, screening
 comments: true
 ---
 
-  Today, I found an arxived paper  titled ["Bayesian Variable Selection for Ultrahigh-dimensional Sparse Linear Models"](http://arxiv.org/abs/1609.06031). This paper is about a relation between the choice of the prior and Bayesian model selection consistency. 
+  Today, I found an arxived paper  titled ["Bayesian Variable Selection for Ultrahigh-dimensional Sparse Linear Models"](http://arxiv.org/abs/1609.06031) by Mukhopadhyay and Dutta. This paper is about a relation between the choice of the prior and Bayesian model selection consistency. 
 
   The linear regression model with an index of the variables $\bf k$ can be expressed as
 
