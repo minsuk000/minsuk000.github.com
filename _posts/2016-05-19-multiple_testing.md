@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Basics of Model Selection: Likelihood Testing and Multple Testing"
+title: "Basics of Model Selection: When Marginal Screening and Multple Testing Fail?"
 output: html_document
 comments: true
 ---
