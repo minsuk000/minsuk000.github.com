@@ -15,16 +15,16 @@ $$
 
 where $$X_{\bf k}$$ denotes a subset of covariates $$X$$ indexed in $$\bf k$$, and $$\epsilon\sim N(0,\sigma^2I_n)$$.  For simplicity, assume that $$\sigma^2$$ is known.
 
-As I discussed in the previous post ["How to prove the  Bayesian Model Selection Consistency in Linear Models for High-dimensional Settings"]({% post_url 2016-06-14-213921%}), we may want to choose the priors on the model space and the regression coefficient $$\beta_{\bf k}$$ given a model $$\bf k$$ as follows:
+As I discussed in the previous post ["How to prove the  Bayesian Model Selection Consistency in Linear Models for High-dimensional Settings"]({% post_url 2016-06-14-213921%}), we may want to choose the priors on the model space and the regression coefficient $$\beta_{\bf k}$$ given a model $${\bf k}$$ as follows:
 
 $$
 \begin{eqnarray*}
 \pi({\bf k})&\propto& p^{-|{\bf k}|}(1-p^-1)^{p-|{\bf k}|}\\
-\pi(\beta_\bk\mid {\bf k}) \sim N(0,\sigma^2g_n I_|{\bf k}|).
+\pi(\beta_{\bf k}\mid {\bf k}) &\sim& N(0,\sigma^2g_n I_|{\bf k}|).
 \end{eqnarray*}
 $$
 
-The main part of the model selection consistency is that when $$ g_n/n \asymp p^{2+\delta}$$ for some positive constant $$\delta$$. The posterior probability of the true model converges to one in probability. This result is quite strong, because a single model (the true model) is dominating the $2^p-1$ number of the other models, especially in a theoretical situation where $$p$$ increases an exponential rate of $$n$$; i.e., $$\log p = O(n^{1-\alpha})$$  for $0<$\alpha\leq 1$$. In the paper, the authors stated the condition regarding the dimension $$p$$ as  $$0\leq\alpha<1$$, but I think that this is a typo, since when $$\alpha=0$$ the number of variables overwhelms the goodness-of-fit from the likelihood, which attains $$\exp\{ - cn\}$$ for some constant $$c$$. 
+The main part of the model selection consistency is that when $$ g_n/n \asymp p^{2+\delta}$$ for some positive constant $$\delta$$. The posterior probability of the true model converges to one in probability. This result is quite strong, because a single model (the true model) is dominating the $$2^p-1$$ number of the other models, especially in a theoretical situation where $$p$$ increases an exponential rate of $$n$$; i.e., $$\log p = O(n^{1-\alpha})$$  for $$0<\alpha\leq 1$$. In the paper, the authors stated the condition regarding the dimension $$p$$ as  $$0\leq\alpha<1$$, but I think that this is a typo, since when $$\alpha=0$$ the number of variables overwhelms the goodness-of-fit from the likelihood, which attains $$\exp\{ - cn\}$$ for some constant $$c$$. 
 
  This work reminds me of [the BASAD](https://arxiv.org/pdf/1405.6545.pdf). Only difference from the BASAD is that the considered prior in the paper is a discrete mixture of the Dirac delta function and the Gaussian prior, while the BASAD used a continuous mixture of two Gaussian densities as a  spike and slab prior.   Basic statements and the regularity conditions are pretty similar. It also looks very similar with [Catillo et al. (2015)](https://arxiv.org/pdf/1403.0735). The model prior considered in [Catillo et al. (2015)](https://arxiv.org/pdf/1403.0735) is even more general than the considered model prior.
  
