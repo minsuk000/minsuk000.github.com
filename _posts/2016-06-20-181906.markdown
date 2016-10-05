@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An issue about the proof of the model selection consistency"
+title: "An Issue About the Proof of the Model Selection Consistency"
 output: html_document
 comments: true
 ---

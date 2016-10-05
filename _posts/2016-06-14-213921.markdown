@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to prove the  Bayesian Model Selection Consistency in Linear Models for High-dimensional Settings"
+title: "How to Prove the  Bayesian Model Selection Consistency in Linear Models for High-dimensional Settings"
 output: html_document
 comments: true
 ---
