@@ -4,7 +4,7 @@ title: "Penalized Likelihood Estimator and Shrinkage Priors (2): Hodge's Estimat
 comments: true
 ---
  
- Previously, I talked about the sparse and shrinkage estimator based on penalized likelihood methods (["Penalized likelihood Estimator and Shrinkage Priors (1)"]({% post_url 2016-07-02-120519%})). Today I am going to discuss the legendary estimator so-called "Hodge's estimator" and its theoretical properties.
+ Previously, I talked about the sparse and shrinkage estimator based on penalized likelihood methods (["Penalized Likelihood Estimator and Shrinkage Priors (1)"]({% post_url 2016-07-02-120519%})). Today I am going to discuss the legendary estimator so-called "Hodge's estimator" and its theoretical properties.
 
 The legendary statistician R. A. Fisher believed that the maximum likelihood estimators (MLE) would be the most efficient in the sense that the variance of the MLE is always less or equal to that of any other estimator, at least in an asymptotic sense. However, Hodges' famous example of [super-efficiency](http://www.stat.yale.edu/~pollard/Books/LeCamFest/VanderVaart.pdf) not only broke down Fisher's naive belief, but also brought a huge shock to the world of statistics, since Hodges showed that his estimator achieves less asymptotic variance than that of MLE when the true parameter is exactly same as the specified test value, and that it is as efficient as MLE otherwise.
 
