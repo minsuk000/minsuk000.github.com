@@ -2,6 +2,36 @@
 layout: post
 title: "Penalized Likelihood Estimator and Shrinkage Priors (3): LASSO and Bayesian LASSO"
 date: 2016-10-13 21:47
+comments: true
 ---
 
+*A Toy Example*
+Consider the following simple model:
+
+$$
+y_i  = \theta + \epsilon_i,
+$$
+
+where $$\epsilon_i\sim N(0,1) $$ for $$i=1,\dots,n$$.
+
+One might be interested in the sparsity of $$ \theta $$; whether $$ \theta $$ is zero or not. In this simple example, we are able to use a hypothesis testing to make an inference on $$ \theta $$, but when we consider multiple parameters, it is not clear to infer the sparsity. This issue has motivated a use of penalty on the likelihood function.
+
+*LASSO and Bayesian LASSO*
+
+Consider a $$L_1 $$ penalized likelihood estimator as 
+
+$$
+\widehat\theta_{L_1} = {argmin}_\theta \left\{ -2\log L(y\mid \theta) + \lambda|\theta| \right\} = argmin_\theta\left\{ \sum_{i=1}^n(y_i-\theta)^2 + \lambda|\theta| \right\},
+$$
+
+where $$ L(y \mid \cdot) $$ is the likelihood function and $$ \lambda $$ is the tuning parameter. Then, the resulting estimator has an explicit form as 
+
+$$
+\widehat\theta_{L_1} = \begin{cases} \bar y -\frac{\lambda}{n}sgn(\bar y),\:\:\mbox{if}\:\:|\bar y| \geq \frac{\lambda}{n}\\
+0,\:\:\mbox{otherwise}, 
+\end{cases}  
+$$
+
+where $$\bar y $$ is the sample mean and $$sgn(\cdot) $$ is the sign function. The solution can be shown as in the following figure:
+ 
 
