@@ -7,8 +7,6 @@ comments: true
 
 ### A Toy Example
 
-
-$$
 Consider the following simple model that has been used in the previous post ["Penalized Likelihood Estimator and Shrinkage Priros (1)"]({% post_url 2016-07-02-120519%}):
 
 $$
@@ -34,6 +32,6 @@ $$
 \end{cases}  
 $$
 
-where $$\bar y $$ is the sample mean and $$sgn(\cdot) $$ is the sign function. The solution can be shown as in the following figure:
+where $$\bar y $$ is the sample mean and $$sgn(\cdot) $$ is the sign function. The solution is plotted in the previous post ["Penalized Likelihood Estimator and Shrinkage Priors (1)"]({% post_url 2016-07-02-120519%}).
  
 
