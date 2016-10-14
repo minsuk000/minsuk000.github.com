@@ -5,7 +5,11 @@ date: 2016-10-13 21:47
 comments: true
 ---
 
-Consider the following simple model that has been used in the previous post 
+### A Toy Example
+ider the following simple model that has been used in the previous post ["Penalized Likelihood Estimator and Shrinakge Priors (1)"]({%  post_url 2016-0702-120519%}):
+
+$$
+Consider the following simple model that has been used in the previous post ["Penalized Likelihood Estimator and Shrinkage Priros (1)"]({% post_url 2016-07-02-120519%}):
 
 $$
 y_i  = \theta + \epsilon_i,
@@ -15,7 +19,7 @@ where $$\epsilon_i\sim N(0,1) $$ for $$i=1,\dots,n$$.
 
 One might be interested in the sparsity of $$ \theta $$; whether $$ \theta $$ is zero or not. In this simple example, we are able to use a hypothesis testing to make an inference on $$ \theta $$, but when we consider multiple parameters, it is not clear to infer the sparsity. This issue has motivated a use of penalty on the likelihood function.
 
-
+### LASSO and Bayesian LASSO
 Consider a $$L_1 $$ penalized likelihood estimator as 
 
 $$
