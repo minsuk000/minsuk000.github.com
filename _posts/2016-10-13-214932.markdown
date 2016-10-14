@@ -6,7 +6,7 @@ comments: true
 ---
 
 ### A Toy Example
-ider the following simple model that has been used in the previous post ["Penalized Likelihood Estimator and Shrinakge Priors (1)"]({%  post_url 2016-0702-120519%}):
+
 
 $$
 Consider the following simple model that has been used in the previous post ["Penalized Likelihood Estimator and Shrinkage Priros (1)"]({% post_url 2016-07-02-120519%}):
