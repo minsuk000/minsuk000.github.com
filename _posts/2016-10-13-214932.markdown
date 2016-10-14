@@ -5,7 +5,7 @@ date: 2016-10-13 21:47
 comments: true
 ---
 
-Consider the following simple model that has been used in the previous post ["Penalized Likelihood Estimator and Shrinakge Priors (1)"]({%  post_url 2016-0702-120519%}):
+Consider the following simple model that has been used in the previous post 
 
 $$
 y_i  = \theta + \epsilon_i,
