@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Penalized Likelihood Estimator and Shrinkage Priors (3): LASSO and Bayesian LASSO"
+date: 2016-10-13 21:47
+---
+
+
