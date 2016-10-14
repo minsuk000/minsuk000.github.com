@@ -34,4 +34,8 @@ $$
 
 where $$\bar y $$ is the sample mean and $$sgn(\cdot) $$ is the sign function. The solution is plotted in the previous post ["Penalized Likelihood Estimator and Shrinkage Priors (1)"]({% post_url 2016-07-02-120519%}).
  
+This $$L_1 $$ penalty idea can be applied to a linear regression model, then the penalized likelihood method is called the ''Least Absolute Shrinkage and Selection Operator'' ([LASSO](http://www.jstor.org/stable/2346178?seq=1#page_scan_tab_contents)). [Park and Casella (2008)](http://www.stat.ufl.edu/~casella/Papers/Lasso.pdf) proposed a natural Bayesian version of LASSO by imposing  [the Laplace distribution](https://en.m.wikipedia.org/wiki/Laplace_distribution) (or double-exponential distribution) on the regession parameter. The resulting posterior distribution of $$ \theta$$ in the above simple model can be expresses as 
 
+$$
+ \pi(\theta \mid y) \propto L(y\mid\theta)\pi(\theta) \propto \exp\left\{ -\sum_{i=1}^n(y_i-\theta)^2/2 - \lambda |\theta|/2  \right\}.
+$$
