@@ -39,3 +39,18 @@ This $$L_1 $$ penalty idea can be applied to a linear regression model, then the
 $$
  \pi(\theta \mid y) \propto L(y\mid\theta)\pi(\theta) \propto \exp\left\{ -\sum_{i=1}^n(y_i-\theta)^2/2 - \lambda |\theta|/2  \right\}.
 $$
+
+
+Therefore, the ''maximum a posteriori'' (MAP) estimator of $$\theta$$ can be expressed as
+
+$$ \begin{eqnarray*} \widehat \theta^{MAP} &=& argmax_\theta \{\pi(\theta \mid y)\} = argmax_\theta \left\{\exp\left\{ -\sum_{i=1}^n(y_i-\theta)^2/2 - \lambda |\theta|/2  \right\} \right\} \\
+&=& argmin_\theta\left\{ \sum_{i=1}^n(y_i-\theta)^2 + \lambda|\theta| \right\}\\
+&=& \widehat\theta_{L_1}. \end{eqnarray*}$$
+
+Hence, this shows that the $$ L_1 $$ penalized estimator and the MAP estimator based on  [the Laplace distribution](https://en.m.wikipedia.org/wiki/Laplace_distribution) are equivalent. However, the sharp density around the origin in the Laplace prior hinders the MCMC chain from mixing well. To overcome this issue,  [Park and Casella (2008)](http://www.stat.ufl.edu/~casella/Papers/Lasso.pdf) introduce a mixture of a Gaussian prior that is marginally equivalent to the Laplace prior as follows:
+
+$$\begin{eqnarray*}
+\theta \mid \tau^2 &\sim& N(0,\tau^2)\\
+\tau^2 &\sim& exp(\lambda).
+\end{eqnarray*}
+$$
