@@ -67,7 +67,7 @@ $$
 
 Hence, in the Gibbs sampling, first it samples $$ \tau^2 $$ from  the conditional posterior distribution given $$ \theta $$, then it generates a posterior sample $$ \theta $$ given $$ \tau^2 $$, and it is very esay, since  the posterior distribution of $$ \theta $$ given $$ \tau^2 $$ is conjugate. The mixing of the resulting Gibbs sampling is much more efficient than the naive version of the Bayesian LASSO.
 
-###The Bias of LASSO and the Tail Behavior of Bayesian LASSO
+### The Bias of LASSO and the Tail Behavior of Bayesian LASSO
 
 In this section, I am going to talk about the bias of $ L_1 $ penalty and its interpretation in a Bayesian perspective.
 
