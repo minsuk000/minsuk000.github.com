@@ -112,7 +112,7 @@ The conditional posterior expectation of $$ \theta  $$ is a convex mixture betwe
 
 ![look](/assets/hs.png)
 
-The above figure illustrates the density function of <math>Beta(1/2,1/2)</math>. The density of <math>Beta(1/2,1/2)</math> assigns a large proportion of probability mass around zero and one, which results in  the posterior expectation of <math>\theta  </math> shrinking towards the $$\bar y  $$ or zero.
+The above figure illustrates the density function of $$Beta(1/2,1/2)$$. The density of $$Beta(1/2,1/2)$$ assigns a large proportion of probability mass around zero and one, which results in  the posterior expectation of $$\theta $$ shrinking towards the $$\bar y  $$ or zero.
 
 ### Conclusion
 
