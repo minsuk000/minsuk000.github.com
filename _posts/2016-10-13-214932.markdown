@@ -57,6 +57,7 @@ $$
 
 
 More specifically, 
+
 $$ \begin{eqnarray*}
 \pi(\theta) &\propto& \int \pi(\theta\mid \tau^2) \pi(\tau^2) d\tau\\
 &\propto&\int \exp\{-\theta^2/(2\tau^2) - \lambda \tau^2 \} d\tau\\
