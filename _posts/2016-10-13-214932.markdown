@@ -71,5 +71,5 @@ Hence, in the Gibbs sampling, first it samples $$ \tau^2 $$ from  the conditiona
 
 In this section, I am going to talk about the bias of $ L_1 $ penalty and its interpretation in a Bayesian perspective.
 
-![look at me3](/assets/penalty2.pdf)
+![look at me3](/assets/blasso.pdf)
 
