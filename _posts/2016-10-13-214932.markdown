@@ -96,6 +96,7 @@ $$
 \tau &\sim& Cauchy^+,
 \end{eqnarray*}
 $$
+
 where $$  Cauchy^+ $$  is a standard half-Cauchy distributon. Then, the marginal prior density of $$ \theta $$  approximately can be shown  $$ \pi(\theta)\approx C_1\log (1+C_2/θ^2) $$ for some constants   $$ C_1 $$ and $$ C_2 $$. Also, one can show that <math>\log (1+C_2/θ^2)\asymp \theta^{-2}$$ when $$\theta $$ is large enough, which means that the marginal HS prior has Cauchy-like tails.
 
 The intuition of the HS prior can be explained by reparameterizing $$\omega = (1+\tau^2)^{-1}$$ as
@@ -106,6 +107,7 @@ E[\theta \mid y, \omega] &=& (1-\omega)\bar y + \omega \cdot 0\\
 \omega &\sim& Beta(1/2,1/2). 
  \end{eqnarray*}
 $$
+
 The conditional posterior expectation of $$ \theta  $$ is a convex mixture between the MLE $$ \bar y $$ and zero, and the weight $$\omega $$ has the prior density $$ Beta(1/2,1/2) $$.
 
 ![look](/assets/hs.png)
