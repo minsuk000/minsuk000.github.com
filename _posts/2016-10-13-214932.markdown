@@ -117,6 +117,6 @@ The above figure illustrates the density function of $$Beta(1/2,1/2)$$. The dens
 ### Conclusion
 
  I have talked about a connection between LASSO and Bayesian LASSO, and also discussed a disadvantage of using the $$L_1$$ penalty or the Laplace prior in a Bayesian perspective. Instead, I prefer to use the horseshoe prior, but the computational mixing issue in MCMC is still 
- problematic. It is a big challenge to avoid computational complexity in high-dimensional Bayesian statistics.
+ problematic which is one of the bigest challenges in high-dimensional Bayesian statistics. I currently working on a scalable approximation of posterior distributions. If I make any progress, I will post it here :-)
  
 
