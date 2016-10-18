@@ -97,7 +97,7 @@ $$
 \end{eqnarray*}
 $$
 
-where $$  Cauchy^+ $$  is a standard half-Cauchy distributon. Then, the marginal prior density of $$ \theta $$  approximately can be shown  $$ \pi(\theta)\approx C_1\log (1+C_2/θ^2) $$ for some constants   $$ C_1 $$ and $$ C_2 $$. Also, one can show that <math>\log (1+C_2/θ^2)\asymp \theta^{-2}$$ when $$\theta $$ is large enough, which means that the marginal HS prior has Cauchy-like tails.
+where $$  Cauchy^+ $$  is a standard half-Cauchy distributon. Then, the marginal prior density of $$ \theta $$  approximately can be shown  $$ \pi(\theta)\approx C_1\log (1+C_2/θ^2) $$ for some constants   $$ C_1 $$ and $$ C_2 $$. Also, one can show that $$\log (1+C_2/θ^2)\asymp \theta^{-2}$$ when $$\theta $$ is large enough, which means that the marginal HS prior has Cauchy-like tails.
 
 The intuition of the HS prior can be explained by reparameterizing $$\omega = (1+\tau^2)^{-1}$$ as
 
