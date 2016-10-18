@@ -69,14 +69,14 @@ Hence, in the Gibbs sampling, first it samples $$ \tau^2 $$ from  the conditiona
 
 ### The Bias of LASSO and the Tail Behavior of Bayesian LASSO
 
-In this section, I am going to talk about the bias of $ L_1 $ penalty and its interpretation in a Bayesian perspective.
+In this section, I am going to talk about the bias of $$ L_1 $$ penalty and its interpretation in a Bayesian perspective.
 
 
 ![look at me3](/assets/blasso.png)
 
 ##### Figure (1) Penalty function of LASSO and prior dendisty of Bayesian LASSO.
 
-The above figure illustrates the  $$L_1 $$ penalty function and the corresponding Bayesian prior (Laplace distribution). The problem of  $$L_1 $$ penalty is that as  $$\theta $$ gets larger the penalty on  $$\theta $$  also becomes stronger, which means that even when the MLE of  $$\theta $$ is large enough not to be penalized, the  $$L_1 $$  penalized estimator shrinks towards zero. [Fan and Li (2001)](http://orfe.princeton.edu/~jqfan/papers/01/penlike.pdf ) defined this overshrinking property as the "bias" of a penalty function. In a Bayesian point of view, on the other hand, this bias is closely related to the tail behavior of the prior corresponding to the penalty of the penalized likelihood. The tail of the Laplace density decays exponentially, since the density function is proportional to  $$ \exp\{ - \lambda \|\theta\|\} $$ for some constant $$\lambda$$. When the model contains a large number of parameters and one expects strong sparsity on the parameters, it is required to choose a large $$\lambda$$, then the resulting Laplace prior has scarce density at the tail part. This tail behavior results in overshrinkage effects towards zero so that the resulting posterior distribution is not able to concentrate around the true parameter value in the optimal rate.
+The above figure illustrates the  $$L_1 $$ penalty function and the corresponding Bayesian prior (Laplace distribution). The problem of  $$L_1 $$ penalty is that as  $$\theta $$ gets larger the penalty on  $$\theta $$  also becomes stronger, which means that even when the MLE of  $$\theta $$ is large enough not to be penalized, the  $$L_1 $$  penalized estimator shrinks towards zero. [Fan and Li (2001)](http://orfe.princeton.edu/~jqfan/papers/01/penlike.pdf ) defined this overshrinking property as the "bias" of a penalty function. In a Bayesian point of view, on the other hand, this bias is closely related to the tail behavior of the prior corresponding to the penalty of the penalized likelihood. The tail of the Laplace density decays exponentially, since the density function is proportional to  $$ \exp\{ - \lambda \mid\theta\mid\} $$ for some constant $$\lambda$$. When the model contains a large number of parameters and one expects strong sparsity on the parameters, it is required to choose a large $$\lambda$$, then the resulting Laplace prior has scarce density at the tail part. This tail behavior results in overshrinkage effects towards zero so that the resulting posterior distribution is not able to concentrate around the true parameter value in the optimal rate.
 
 ### The Idea of Horseshoe Prior 
  
@@ -111,5 +111,9 @@ The conditional posterior expectation of $$ \theta  $$ is a convex mixture betwe
 
 The above figure illustrates the density function of <math>Beta(1/2,1/2)</math>. The density of <math>Beta(1/2,1/2)</math> assigns a large proportion of probability mass around zero and one, which results in  the posterior expectation of <math>\theta  </math> shrinking towards the $$\bar y  $$ or zero.
 
+### Conclusion
 
+ I have talked about a connection between LASSO and Bayesian LASSO, and also discussed a disadvantage of using the $$L_1$$ penalty or the Laplace prior in a Bayesian perspective. Instead, I prefer to use the horseshoe prior, but the computational mixing issue in MCMC is still 
+ problematic. It is a big challenge to avoid computational complexity in high-dimensional Bayesian statistics.
+ 
 
