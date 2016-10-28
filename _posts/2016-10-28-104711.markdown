@@ -28,6 +28,10 @@ $$
 \pi({\bf k}\mid y) = \frac{m_{\bf k}(y)\pi({\bf k})}{\sum_{\bf l}m_{\bf l}(y)\pi({\bf l})}, 
 $$  
 
+ where $$m_{\bf k}(y)$$ is the marginal likelihood of the model $${\bf k}$$ and $$\pi({\bf k})$$ is its model prior.
+
+However, the problem is that there exist too many possible models; the total number of possible models is $$2^p$$. Even when p is moderate, saying 50, we cannot evaluate $$2^50$$ number of marginal likelihoods.
+
 
 
 
