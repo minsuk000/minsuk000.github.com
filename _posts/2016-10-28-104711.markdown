@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Simplified Shotgun Stochastic Search With Screening (S5)"
+date: 2016-10-27 20:41
+draft: true
+---
+
+I was writing a paper about [a high-dimensional Bayesian variable selection method](http://www.stat.tamu.edu/~minsuk/publications/nonlocal_sinica7.dpf).
+
