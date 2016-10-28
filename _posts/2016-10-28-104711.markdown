@@ -7,9 +7,27 @@ hidden: true
 
 ### DRAFT
 
+
 Today I am going to introduce my recent work about a scalable stochastic search algorithm for high-dimensional Bayesian variable selection, which is called "Simplified Shotgun Stochastic Search with Screening" (S5). This algorithm is not only super-fast and efficient, but it is also scalable in a sense that the computational cost is robust to the dimension $$p$$.  
 
+### Motivation
+
 I was writing a paper about [a high-dimensional Bayesian variable selection method](http://www.stat.tamu.edu/~minsuk/publications/nonlocal_sinica7.dpf). I was so naive to try to examine 3 settings with different 40 tuning parameters and 100 datasets with $$p $$ =20000; total 12,000 high-dimensional  datasets. I found that for a each dataset it was expected to take about **2 hours** and the total simulation time was estimated about 1,000 days. Even if I used multiple cores for the computation, it was still not feasible. Practically to do the simulation, I needed some algorithm not only giving me results within **10 seconds**, but also providing an efficient uncertainty identification of the model space.
+
+### Model
+
+Consider a linear regression model given a model $${\bf k}$$ as 
+ 
+$$
+ y = X_{\bf k}\beta_{\bf k} + \epsilon,
+ $$
+ 
+ where $$\epsilon \sim N(0,\sigma^2I_n)$$ and $$X_{\bf k}$$ refers to a submatrix of $X$ containing the variables in the model ${\bf k}$. The resulting posterior probability of each model  is 
+
+$$
+\pi({\bf k}\mid y) = \frac{m_{\bf k}(y)\pi({\bf k})}{\sum_{\bf l}m_{\bf l}(y)\pi({\bf l})}, 
+$$  
+
 
 
 
