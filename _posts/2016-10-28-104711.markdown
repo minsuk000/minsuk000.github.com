@@ -7,5 +7,5 @@ hidden: true
 
 ### DRAFT
 
-I was writing a paper about [a high-dimensional Bayesian variable selection method](http://www.stat.tamu.edu/~minsuk/publications/nonlocal_sinica7.dpf). This is 
+I was writing a paper about [a high-dimensional Bayesian variable selection method](http://www.stat.tamu.edu/~minsuk/publications/nonlocal_sinica7.dpf). I was too naive to try to examine 3 settings with different 40 tuning parameters and 100 datasets with the dimension $$p=20000$$; total 12,000 high-dimensional  datasets. I found that for a each dataset it was expected to take about 10 hours and the total simulation time was estimated about 166 days.  
 
