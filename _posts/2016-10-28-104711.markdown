@@ -22,7 +22,7 @@ $$
  y = X_{\bf k}\beta_{\bf k} + \epsilon,
  $$
  
- where $$\epsilon \sim N(0,\sigma^2I_n)$$ and $$X_{\bf k}$$ refers to a submatrix of $X$ containing the variables in the model ${\bf k}$. The resulting posterior probability of each model  is 
+ where $$\epsilon \sim N(0,\sigma^2I_n)$$ and $$ X_{\bf k} $$ refers to a submatrix of $$X$$ containing the variables in the model $${\bf k}$$. The resulting posterior probability of each model  is 
 
 $$
 \pi({\bf k}\mid y) = \frac{m_{\bf k}(y)\pi({\bf k})}{\sum_{\bf l}m_{\bf l}(y)\pi({\bf l})}, 
