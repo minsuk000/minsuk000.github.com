@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Paper About Bayesian Variable Selection"
+title: "A Paper about Bayesian Variable Selection"
 tags: Bayesian model selection, screening
 comments: true
 ---
