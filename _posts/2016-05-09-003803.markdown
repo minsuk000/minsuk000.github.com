@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Basics of  Model Selection: Information Criterion" 
+title: "Basics of  Model Selection: Information Criterion: Akaike Inofromation Criterion and Bayesian Inofromation Criterion" 
 tags: Bayesian model selection, shrinkage priors
 comments: true
 ---
