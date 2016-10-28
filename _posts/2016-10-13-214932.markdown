@@ -5,6 +5,8 @@ date: 2016-10-13 21:47
 comments: true
 ---
 
+ The topic that I am going to deal with is about a connection between LASSO and Bayesian LASSO. Also, I am going to introduce the idea of [the horseshoe prior](http://faculty.chicagobooth.edu/nicholas.polson/research/papers/Horse.pdf). Let me begin with a toy example.
+ 
 ### A Toy Example
 
 Consider the following simple model that has been used in the previous post ["Penalized Likelihood Estimator and Shrinkage Priros (1)"]({% post_url 2016-07-02-120519%}):
@@ -15,7 +17,9 @@ $$
 
 where $$\epsilon_i\sim N(0,1) $$ for $$i=1,\dots,n$$.
 
-One might be interested in the sparsity of $$ \theta $$; whether $$ \theta $$ is zero or not. In this simple example, we are able to use a hypothesis testing to make an inference on $$ \theta $$, but when we consider multiple parameters, it is not clear to infer the sparsity. This issue has motivated a use of penalty on the likelihood function.
+One might be interested in the sparsity of $$ \theta $$; whether $$ \theta $$ is zero or not. 
+In this simple example, we are able to use a hypothesis testing to make an inference on $$ \theta $$, but when we consider multiple parameters, it is not clear to infer the sparsity. 
+This issue has motivated a use of penalty on the likelihood function.
 
 ### LASSO and Bayesian LASSO
 Consider a $$L_1 $$ penalized likelihood estimator as 
@@ -34,7 +38,7 @@ $$
 
 where $$\bar y $$ is the sample mean and $$sgn(\cdot) $$ is the sign function. The solution is plotted in the previous post ["Penalized Likelihood Estimator and Shrinkage Priors (1)"]({% post_url 2016-07-02-120519%}).
  
-This $$L_1 $$ penalty idea can be applied to a linear regression model, then the penalized likelihood method is called the ''Least Absolute Shrinkage and Selection Operator'' ([LASSO](http://www.jstor.org/stable/2346178?seq=1#page_scan_tab_contents)). [Park and Casella (2008)](http://www.stat.ufl.edu/~casella/Papers/Lasso.pdf) proposed a natural Bayesian version of LASSO by imposing  [the Laplace distribution](https://en.m.wikipedia.org/wiki/Laplace_distribution) (or double-exponential distribution) on the regession parameter. The resulting posterior distribution of $$ \theta$$ in the above simple model can be expresses as 
+This $$L_1 $$ penalty idea can be applied to a linear regression model, then the resulting penalized likelihood method is called the ''Least Absolute Shrinkage and Selection Operator'' ([LASSO](http://www.jstor.org/stable/2346178?seq=1#page_scan_tab_contents)). [Park and Casella (2008)](http://www.stat.ufl.edu/~casella/Papers/Lasso.pdf) proposed a natural Bayesian version of LASSO by imposing  [the Laplace distribution](https://en.m.wikipedia.org/wiki/Laplace_distribution) (or double-exponential distribution) on the regession parameter. Its posterior distribution in the above simple model can be expresses as 
 
 $$
  \pi(\theta \mid y) \propto L(y\mid\theta)\pi(\theta) \propto \exp\left\{ -\sum_{i=1}^n(y_i-\theta)^2/2 - \lambda |\theta|/2  \right\}.
@@ -66,7 +70,8 @@ $$ \begin{eqnarray*}
 \end{eqnarray*}
 $$
 
-Hence, in the Gibbs sampling, first it samples $$ \tau^2 $$ from  the conditional posterior distribution given $$ \theta $$, then it generates a posterior sample $$ \theta $$ given $$ \tau^2 $$, and it is very esay, since  the posterior distribution of $$ \theta $$ given $$ \tau^2 $$ is conjugate. The mixing of the resulting Gibbs sampling is much more efficient than the naive version of the Bayesian LASSO.
+In the Gibbs sampling, first $$ \tau^2 $$ from  the conditional posterior distribution given  is going to be sampled given $$ \theta $$, 
+then  a posterior sample $$ \theta $$ given $$ \tau^2 $$ has a normal-normal conjugate posterior, so it is very easy to sample $$\theta$$. The mixing of the resulting Gibbs sampling is much more efficient than the naive version of the Bayesian LASSO.
 
 ### The Bias of LASSO and the Tail Behavior of Bayesian LASSO
 
@@ -77,7 +82,11 @@ In this section, I am going to talk about the bias of $$ L_1 $$ penalty and its 
 
 ##### Figure (1) Penalty function of LASSO and prior dendisty of Bayesian LASSO.
 
-The above figure illustrates the  $$L_1 $$ penalty function and the corresponding Bayesian prior (Laplace distribution). The problem of  $$L_1 $$ penalty is that as  $$\theta $$ gets larger the penalty on  $$\theta $$  also becomes stronger, which means that even when the MLE of  $$\theta $$ is large enough not to be penalized, the  $$L_1 $$  penalized estimator shrinks towards zero. [Fan and Li (2001)](http://orfe.princeton.edu/~jqfan/papers/01/penlike.pdf ) defined this overshrinking property as the "bias" of a penalty function. In a Bayesian point of view, on the other hand, this bias is closely related to the tail behavior of the prior corresponding to the penalty of the penalized likelihood. The tail of the Laplace density decays exponentially, since the density function is proportional to  $$ \exp\{ - \lambda \mid\theta\mid\} $$ for some constant $$\lambda$$. When the model contains a large number of parameters and one expects strong sparsity on the parameters, it is required to choose a large $$\lambda$$, then the resulting Laplace prior has scarce density at the tail part. This tail behavior results in overshrinkage effects towards zero so that the resulting posterior distribution is not able to concentrate around the true parameter value in the optimal rate.
+The above figure illustrates the  $$L_1 $$ penalty function and the corresponding Bayesian prior (Laplace distribution). 
+The problem of  $$L_1 $$ penalty is that as  $$\theta $$ gets larger the penalty on  $$\theta $$  also becomes stronger, which means that  the  $$L_1 $$  penalized estimator shrinks towards zero with a certain amount, regardless of the value of the MLE. 
+[Fan and Li (2001)](http://orfe.princeton.edu/~jqfan/papers/01/penlike.pdf ) defined this overshrinking property as the "bias" of a penalty function. In a Bayesian point of view, on the other hand, 
+this bias is closely related to the tail behavior of the prior corresponding to the penalty of the penalized likelihood. The tail of the Laplace density decays exponentially, since the density function is proportional to  $$ \exp\{ - \lambda \mid\theta\mid\} $$ for some constant $$\lambda$$. 
+When the model contains a large number of parameters and one expects strong sparsity on the parameters, it is required to choose a large $$\lambda$$, then the resulting Laplace prior has scarce density at the tail part. This tail behavior results in overshrinkage effects towards zero so that the resulting posterior distribution is not able to concentrate around the true parameter value in the optimal rate.
 
 ### The Idea of Horseshoe Prior 
  
@@ -97,7 +106,8 @@ $$
 \end{eqnarray*}
 $$
 
-where $$  Cauchy^+ $$  is a standard half-Cauchy distributon. Then, the marginal prior density of $$ \theta $$  approximately can be shown  $$ \pi(\theta)\approx C_1\log (1+C_2/θ^2) $$ for some constants   $$ C_1 $$ and $$ C_2 $$. Also, one can show that $$\log (1+C_2/θ^2)\asymp \theta^{-2}$$ when $$\theta $$ is large enough, which means that the marginal HS prior has Cauchy-like tails.
+where $$  Cauchy^+ $$  is a standard half-Cauchy distributon. Then, the marginal prior density of $$ \theta $$  approximately can be shown  $$ \pi(\theta)\approx C_1\log (1+C_2/θ^2) $$ for some constants   $$ C_1 $$ and $$ C_2 $$. Also, one can show that $$\log (1+C_2/θ^2)\asymp \theta^{-2}$$ when $$\theta $$ is large enough, which means that the marginal HS prior has Cauchy-like tails. 
+Further, $$\lim_{\theta\to 0} C_1\log (1+C_2/θ^2) = \infty$$.
 
 The intuition of the HS prior can be explained by reparameterizing $$\omega = (1+\tau^2)^{-1}$$ as
 
@@ -113,6 +123,7 @@ The conditional posterior expectation of $$ \theta  $$ is a convex mixture betwe
 ![look](/assets/hs.png)
 
 The above figure illustrates the density function of $$Beta(1/2,1/2)$$. The density of $$Beta(1/2,1/2)$$ assigns a large proportion of probability mass around zero and one, which results in  the posterior expectation of $$\theta $$ shrinking towards the $$\bar y  $$ or zero.
+The asymptotic behavior of the posterior distribution of the HS prior for the Gaussian sequence model has been investigated in [van der Pas et al. (2014)](https://projecteuclid.org/euclid.ejs/1418134265).
 
 ### Conclusion
 
