@@ -7,5 +7,5 @@ hidden: true
 
 ### DRAFT
 
-I was writing a paper about [a high-dimensional Bayesian variable selection method](http://www.stat.tamu.edu/~minsuk/publications/nonlocal_sinica7.dpf).
+I was writing a paper about [a high-dimensional Bayesian variable selection method](http://www.stat.tamu.edu/~minsuk/publications/nonlocal_sinica7.dpf). This is 
 
