@@ -33,10 +33,10 @@ $$
 However, the problem is that there exist too many possible models; the total number of possible models is $$2^p$$. Even when $$p$$ is moderate, saying 50, we cannot evaluate $$2^{50}$$ number of marginal likelihoods. 
 
 ### Issues
- *Markov Chain Monte Carlo* (MCMC) has been popular to approximate the posterior model probability. However, the fact that the computational efficiency of MCMC is not scalable (heavily depends on the dimension $$p$$ and length of the chain) hinders the usage of the algorithm in high-dimensional settings. To overcome this issue, [Rockova and George (2015)](http://www.tandfonline.com/doi/abs/10.1080/01621459.2013.869223?journalCode=uasa20) proposed a deterministic approach using the *Expectation-Maximization* (EM) algorithm, but it can be only applied to continous mixtures of spike and slab priors, while the above procedure is with discrete mixtures. Moreover, the interpretation of the approximated latent variable by the EM algorithm is not clear, since it actually does not fully incorporate the posterior model probability. 
+ *Markov Chain Monte Carlo* (MCMC) has been popular to approximate the posterior model probability. However, the fact that the computational efficiency of MCMC is not scalable (heavily depends on the dimension $$p$$ and length of the chain) hinders the usage of the algorithm in high-dimensional settings. 
  
 ### Shotgun Stochastic Search (SSS)
-   
+  To overcome this issue, [Hans et al.](https://pdfs.semanticscholar.org/1f65/77bd4f6ce85a5637a52b18ab63b26cc74d65.pdf) proposed the *Shotgun Stochastic Search* (SSS) algorithm.
 
 
 
