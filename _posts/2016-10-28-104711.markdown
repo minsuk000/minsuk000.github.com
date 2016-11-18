@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Simplified Shotgun Stochastic Search with Screening (S5)"
+date: 2016-10-27 20:41
+hidden: true
+---
+
+### DRAFT
+
+
+Today I am going to introduce my recent work about a scalable stochastic search algorithm for high-dimensional Bayesian variable selection, which is called "Simplified Shotgun Stochastic Search with Screening" (S5). This algorithm is not only super-fast and efficient, but it is also scalable in a sense that the computational cost is robust to the dimension $$p$$.  
+
+### Motivation
+
+I was writing a paper about [a high-dimensional Bayesian variable selection method](http://www.stat.tamu.edu/~minsuk/publications/nonlocal_sinica7.dpf). I was so naive to try to examine 3 settings with different 40 tuning parameters and 100 datasets with $$p $$ =20000; total 12,000 high-dimensional  datasets. I found that for a each dataset it was expected to take about **2 hours** and the total simulation time was estimated about 1,000 days. Even if I used multiple cores for the computation, it was still not feasible. Practically to do the simulation, I needed some algorithm not only giving me results within **10 seconds**, but also providing an efficient uncertainty identification of the model space.
+
+### Model
+
+Consider a linear regression model given a model $${\bf k}$$ as 
+ 
+$$
+ y = X_{\bf k}\beta_{\bf k} + \epsilon,
+ $$
+ 
+ where $$\epsilon \sim N(0,\sigma^2I_n)$$ and $$ X_{\bf k} $$ refers to a submatrix of $$X$$ containing the variables in the model $${\bf k}$$. The resulting posterior probability of each model  is 
+
+$$
+\pi({\bf k}\mid y) = \frac{m_{\bf k}(y)\pi({\bf k})}{\sum_{\bf l}m_{\bf l}(y)\pi({\bf l})}, 
+$$  
+
+ where $$m_{\bf k}(y)$$ is the marginal likelihood of the model $${\bf k}$$ and $$\pi({\bf k})$$ is its model prior.
+
+However, the problem is that there exist too many possible models; the total number of possible models is $$2^p$$. Even when $$p$$ is moderate, saying 50, we cannot evaluate $$2^{50}$$ number of marginal likelihoods. 
+
+### Issues
+ *Markov Chain Monte Carlo* (MCMC) has been popular to approximate the posterior model probability. However, the fact that the computational efficiency of MCMC is not scalable (heavily depends on the dimension $$p$$ and length of the chain) hinders the usage of the algorithm in high-dimensional settings. 
+ 
+### Shotgun Stochastic Search (SSS)
+  To overcome this issue, [Hans et al.](https://pdfs.semanticscholar.org/1f65/77bd4f6ce85a5637a52b18ab63b26cc74d65.pdf) proposed the *Shotgun Stochastic Search* (SSS) algorithm that efficiently searches the model space...
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+

@@ -1,6 +1,10 @@
 ---
 layout: post
+<<<<<<< HEAD
 title: "Basics of  Model Selection: AIC and BIC" 
+=======
+title: "Basics of  Model Selection: Information Criterion: Akaike Inofromation Criterion and Bayesian Inofromation Criterion" 
+>>>>>>> origin/master
 tags: Bayesian model selection, shrinkage priors
 comments: true
 ---
@@ -23,7 +27,10 @@ $$ Y_i = \beta_0 + \beta_1 X_{ 1 i } + \beta_2  X_{ 2 i } +\beta_3 X_{3i} + \eps
 
    Let me start with some information criteria for this simple model selection problem: [Akaike Information Criterion (AIC)](https://en.m.wikipedia.org/wiki/Akaike_information_criterion) and [Bayesian Information Criterion (BIC)](https://en.m.wikipedia.org/wiki/Bayesian_information_criterion).
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 AIC and BIC of a model $$M$$ can be defined as
 
 
@@ -40,7 +47,10 @@ where $$\hat l_M $$ is the maximized log likelihood of the model $$M$$ and  $$\m
   One thing we need to remark is that all the good properties about AIC and BIC only hold true in low-dimensional settings ($$n>p$$). In high-dimensional settings, when $$p$$ grows faster than $$n$$,  none of AIC and BIC has a strong enough penalty regarding the model complexity of the model. The resulting model selection procedure is misleading as no model selection consistency and  no optimality of estimation and prediction can be provided. Some people just use AIC or BIC in high-dimensional settings. To overcome this issue, there are many papers regarding high-dimensional information criteria such as [Extended BIC (EBIC)](http://biomet.oxfordjournals.org/content/95/3/759.abstract), [Generalized IC (GIC)](http://biomet.oxfordjournals.org/content/95/3/759.abstract), [High-dimensional BIC (HBIC)](http://www.sciencedirect.com/science/article/pii/S0047259X11000455). All of them have the same idea; the penalty on the model complexity should depend on the dimension $$p$$. Especially, $$\log p $$ term in the model complexity is important to prevent overfitting in high-dimensional models.
 
 Going back to the simple toy example introduced in the beginning of this article, the model which has the minimal criteria value can be choosen; first evaluate $$AIC_{M_1}$$, $$AIC_{M_2}$$, $$AIC_{M_3}$$, ... etc (if you use AIC) and choose the model which minimizes these values. So simple, huh? However, even when $$p$$ is moderate in the linear model, say 100, so the number of total models is going to be $$2^{100}$$, it is computationally impossible to evaluate all possible models.
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 Then, what should we do? I will discuss this issue later.
 
