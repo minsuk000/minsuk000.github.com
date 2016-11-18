@@ -73,14 +73,14 @@ $$
 In the Gibbs sampling, first $$ \tau^2 $$ from  the conditional posterior distribution given  is going to be sampled given $$ \theta $$, 
 then  a posterior sample $$ \theta $$ given $$ \tau^2 $$ has a normal-normal conjugate posterior, so it is very easy to sample $$\theta$$. The mixing of the resulting Gibbs sampling is much more efficient than the naive version of the Bayesian LASSO.
 
-### The Bias of LASSO and the Tail Behavior of Bayesian LASSO
+### The Bias of LASSO and the Tail Behavior of Bayesian LASSO Prior
 
 In this section, I am going to talk about the bias of $$ L_1 $$ penalty and its interpretation in a Bayesian perspective.
 
 
 ![look at me3](/assets/blasso.png)
 
-##### Figure (1) Penalty function of LASSO and prior dendisty of Bayesian LASSO.
+##### Figure (1) Penalty function of LASSO and prior dendisty of Bayesian LASSO prior.
 
 The above figure illustrates the  $$L_1 $$ penalty function and the corresponding Bayesian prior (Laplace distribution). 
 The problem of  $$L_1 $$ penalty is that as  $$\theta $$ gets larger the penalty on  $$\theta $$  also becomes stronger, which means that  the  $$L_1 $$  penalized estimator shrinks towards zero with a certain amount, regardless of the value of the MLE. 
