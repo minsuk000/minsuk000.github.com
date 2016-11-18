@@ -42,7 +42,9 @@ $$
 nbd({\bf k })=\{ \Gamma^+,\Gamma^-,\Gamma^0 \},
 $$
 
-where $$\Gamma^+= \{ \bk\cup j : j\in \bk^c \}$$, $$\Gamma^-= \{ \bk \setminus j : j\in \bk \}$$, and $$\Gamma^0=\{ [\bk\setminus {j}] \cup k : k\in\bk^c, j\in\bk \}$$.
+where $$\Gamma^+= \{ \bk\cup j : j\in \bk^c \}$$, $$\Gamma^-= \{ \bk \setminus j : j\in \bk \}$$, and $$\Gamma^0=\{ [\bk\setminus {j}] \cup k : k\in\bk^c, j\in\bk \}$$. 
+
+and
 
 
 
