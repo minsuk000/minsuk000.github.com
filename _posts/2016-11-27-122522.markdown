@@ -7,4 +7,12 @@ comments: true
 draft: true
 ---
 
- Yesterday, I found an interesting paper from arxiv. It is about *Model Confidence Bounds* which is an extension of confidence sets in real-valued parameters to model spaces for variable selection.
+ Yesterday, I found an interesting paper from arxiv. It is about *Model Confidence Bounds* which is an extension of confidence sets in real-valued parameters to model spaces for variable selection. Let me explain the details.
+
+ Consider a linear regression model given a model $${\bf k}$$ as 
+ 
+ $$
+ y = X_{\bf k}\beta_{\bf k} + \epsilon,
+ $$
+ 
+Then, you might be interested in finding a set $${\bf k}$$ of significant predictors associated with $y$. Suppose that using an arbitrary variable selection procedure (LASSO or Bayesian model seleciton, etc), you estimated a set of variables $$\widehat{\bf k}$$. 
