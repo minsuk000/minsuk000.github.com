@@ -7,6 +7,4 @@ comments: true
 draft: true
 ---
 
-This is 
-
-
+ Yesterday, I found an interesting paper from arxiv. It is about *Model Confidence Bounds*. 
