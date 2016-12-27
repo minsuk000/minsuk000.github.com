@@ -7,4 +7,4 @@ comments: true
 draft: true
 ---
 
- Yesterday, I found an interesting paper from arxiv. It is about *Model Confidence Bounds*. 
+ Yesterday, I found an interesting paper from arxiv. It is about *Model Confidence Bounds* which is an extension of confidence sets in real-valued parameters to model spaces for variable selection.
