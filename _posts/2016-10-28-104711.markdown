@@ -36,7 +36,7 @@ However, the problem is that there exist too many possible models; the total num
  *Markov Chain Monte Carlo* (MCMC) has been popular to approximate the posterior model probability. However, the fact that the computational efficiency of MCMC is not scalable (heavily depends on the dimension $$p$$ and length of the chain) hinders the usage of the algorithm in high-dimensional settings. 
  
 ### Shotgun Stochastic Search (SSS)
-  To overcome this issue, [Hans et al.](https://pdfs.semanticscholar.org/1f65/77bd4f6ce85a5637a52b18ab63b26cc74d65.pdf) proposed the *Shotgun Stochastic Search* (SSS) algorithm that efficiently searches the model space...
+  To overcome this issue, [Hans et al. (2007)](https://pdfs.semanticscholar.org/1f65/77bd4f6ce85a5637a52b18ab63b26cc74d65.pdf) proposed the *Shotgun Stochastic Search* (SSS) algorithm that efficiently explores the model space.  
 
 
 
