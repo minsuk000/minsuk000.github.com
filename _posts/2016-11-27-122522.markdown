@@ -15,4 +15,8 @@ draft: true
  y = X_{\bf k}\beta_{\bf k} + \epsilon,
  $$
  
-Then, you might be interested in finding a set $${\bf k}$$ of significant predictors associated with $$y$$. Suppose that using an arbitrary variable selection procedure (LASSO or Bayesian model seleciton, etc), you have estimated a set of variables $$\widehat{\bf k}$$. Then, a natual question about this estimated model $$\widehat{\bf k}$$ is "How uncertain is it?". When the parameter is real-valued, there are many existing methods for estimating its confidence interval. However, in variable selection problems, it is not clear how to construct the confidence set for models. This question was first cast by [Hansen et al. (2011)](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&sqi=2&ved=0ahUKEwj38KKYhZXRAhVkxYMKHWhhAq4QFggfMAA&url=http%3A%2F%2Fonlinelibrary.wiley.com%2Fdoi%2F10.3982%2FECTA5771%2Fabstract&usg=AFQjCNFVwcoWmHdDzWrZqJCeJzQruAIP3w&sig2=gsZlgfjqKx-dWlJ5dF9XAQ&cad=rjt)
+Then, you might be interested in finding a set $${\bf k}$$ of significant predictors associated with $$y$$. Suppose that using an arbitrary variable selection procedure (LASSO or Bayesian model seleciton, etc), you have estimated a set of variables $$\widehat{\bf k}$$. Then, a natual question about this estimated model $$\widehat{\bf k}$$ is "How uncertain is it?". When the parameter is real-valued, there are many existing methods for estimating its confidence interval. However, in variable selection problems, it is not clear how to construct the confidence set for models. This question was first cast by [Hansen et al. (2011)](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&sqi=2&ved=0ahUKEwj38KKYhZXRAhVkxYMKHWhhAq4QFggfMAA&url=http%3A%2F%2Fonlinelibrary.wiley.com%2Fdoi%2F10.3982%2FECTA5771%2Fabstract&usg=AFQjCNFVwcoWmHdDzWrZqJCeJzQruAIP3w&sig2=gsZlgfjqKx-dWlJ5dF9XAQ&cad=rjt). To overcome this issue, 
+
+
+
+
