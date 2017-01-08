@@ -1,0 +1,13 @@
+---
+layout: post
+title: Penalized Bayesian?
+date: 2017-01-07 23:13
+comment: true
+---
+
+Today, I found a paper ["A penalized Bayesian approach to predicting sparse protein–DNA binding landscapes"](http://bioinformatics.oxfordjournals.org/content/30/5/636) by Levinson and Zhou. I got confused by the term "penalized Bayesian". The paper uses some penalty on the posterior to induce sparsity. However, the penalty itself is a prior and it can be interpreted as a prior. I got confused why they used the term "penalized". Without the penalty, the posterior distribution is already penalized by the prior. Furthermore, the penalty can be a part of the prior. If the purpose was to get sparsity, they could've considered sparsity inducing priors such as [the Bayesian Lasso](http://www.stat.ufl.edu/~casella/Papers/Lasso.pdf) and [the horseshoe prior](http://www.stat.ufl.edu/~casella/Papers/Lasso.pdf). Maybe, there would be something I am missing, but the term sounds odd.
+ 
+
+     
+
+
