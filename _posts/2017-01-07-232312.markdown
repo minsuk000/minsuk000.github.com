@@ -2,6 +2,7 @@
 layout: post
 title: Penalized Bayesian?
 date: 2017-01-07 23:13
+tags: panlized Bayesian, shrinkage prior
 comment: true
 ---
 
