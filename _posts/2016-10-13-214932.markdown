@@ -18,7 +18,7 @@ $$
 where $$\epsilon_i\sim N(0,1) $$ for $$i=1,\dots,n$$.
 
 One might be interested in the sparsity of $$ \theta $$; whether $$ \theta $$ is zero or not. 
-In this simple example, we are able to use a hypothesis testing to make an inference on $$ \theta $$, but when we consider multiple parameters, it is not clear to infer the sparsity. 
+In this simple example, we can use a hypothesis testing to make an inference on $$ \theta $$, but when we consider multiple parameters, it is not clear to infer the sparsity. 
 This issue has motivated a use of penalty on the likelihood function.
 
 ### LASSO and Bayesian LASSO
